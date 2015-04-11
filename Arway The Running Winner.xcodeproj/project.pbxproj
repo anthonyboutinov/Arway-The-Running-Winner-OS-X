@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A83D4A6E1AD9909E0014A982 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A83D4A6D1AD9909E0014A982 /* libz.dylib */; };
 		A83D4A9D1AD999390014A982 /* NSUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D4A9C1AD999390014A982 /* NSUtils.swift */; };
+		A83D4A9F1AD9C20E0014A982 /* DisplacementAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D4A9E1AD9C20D0014A982 /* DisplacementAble.swift */; };
 		A84B58D51AD9869500478227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B58D41AD9869500478227 /* AppDelegate.swift */; };
 		A84B58D71AD9869500478227 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B58D61AD9869500478227 /* GameScene.swift */; };
 		A84B58DE1AD9869500478227 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84B58DC1AD9869500478227 /* MainMenu.xib */; };
@@ -67,6 +68,7 @@
 /* Begin PBXFileReference section */
 		A83D4A6D1AD9909E0014A982 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		A83D4A9C1AD999390014A982 /* NSUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUtils.swift; sourceTree = "<group>"; };
+		A83D4A9E1AD9C20D0014A982 /* DisplacementAble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplacementAble.swift; sourceTree = "<group>"; };
 		A84B58CF1AD9869500478227 /* Arway The Running Winner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arway The Running Winner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A84B58D31AD9869500478227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A84B58D41AD9869500478227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				A84B59011AD986F300478227 /* MonsterCat.swift */,
 				A84B59021AD986F300478227 /* Tweet.swift */,
 				A84B59031AD986F300478227 /* Player.swift */,
+				A83D4A9E1AD9C20D0014A982 /* DisplacementAble.swift */,
 				A84B59041AD986F300478227 /* PokerMad.swift */,
 			);
 			name = "Interactive Elements";
@@ -413,6 +416,7 @@
 				A83D4A9D1AD999390014A982 /* NSUtils.swift in Sources */,
 				A84B58D51AD9869500478227 /* AppDelegate.swift in Sources */,
 				A84B59141AD9871000478227 /* WorldStateWithUI.swift in Sources */,
+				A83D4A9F1AD9C20E0014A982 /* DisplacementAble.swift in Sources */,
 				A84B59051AD986F300478227 /* Updatable.swift in Sources */,
 				A84B59071AD986F300478227 /* Enemy.swift in Sources */,
 				A84B59181AD9871000478227 /* Sound.swift in Sources */,

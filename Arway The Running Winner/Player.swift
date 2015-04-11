@@ -8,15 +8,10 @@
 
 import Foundation
 
-let timePerFrame = 0.4
+let timePerFrame = 0.5
 
-class Player: Updatable, HoldsItsSprite {
-    
-    private enum Displacement {
-        case Left, Right, Up, Down, None
-    }
-    
-    private var oldDisplacement: (Displacement, Displacement) = (.None, .None)
+class Player: DisplacementAble, Updatable, HoldsItsSprite {
+
     
     // MARK: Physical properties and constraints
     static private let minMovement = CGPoint(x: -220.0, y: -350.0)
@@ -27,9 +22,9 @@ class Player: Updatable, HoldsItsSprite {
     static private let movementMomentum = CGFloat(600.0)
     static private let powerUpMovementMomentumMultiplier = CGFloat(2.25)
     
-    static private let powerUpTime: NSTimeInterval = 30.0
+    static private let powerUpTime: NSTimeInterval = 15.0
     
-    static private let downForce = CGFloat(-2.8799999999999999)
+//    static private let downForce = CGFloat(-2.8799999999999999)
     
     // MARK: - Variables
     // MARK: Sprite
@@ -137,10 +132,6 @@ class Player: Updatable, HoldsItsSprite {
         sprite = SKSpriteNode(texture: Arway.stillTexture)
         sprite.zPosition = -21.0
         
-//        let animateWalkAction = SKAction.animateWithTextures(walkRightTextures, timePerFrame: 0.40)
-//        let spriteWalkAnimationAction = SKAction.repeatActionForever(animateWalkAction)
-//        sprite.runAction(spriteWalkAnimationAction)
-        
         desiredPosition = position
         sprite.position = position
     }
@@ -201,6 +192,8 @@ class Player: Updatable, HoldsItsSprite {
         
     }
     
+    
+    
     private func updateFrameAmination(delta: CFTimeInterval, var displacement: CGPoint) {
         
         var updateAlternatingAmination = false
@@ -212,14 +205,7 @@ class Player: Updatable, HoldsItsSprite {
             currentTexture = currentTexture == 0 ? 1 : 0
         }
         
-        if abs(displacement.x) > 0.0 && abs(displacement.x) < 1.0 {
-            displacement.x = 0.0
-        }
-        
-        let dxdy = (
-            displacement.x > 0 ? Displacement.Right : displacement.x == 0 ? Displacement.None : Displacement.Left,
-            displacement.y > 0 ? Displacement.Up : onGround ? Displacement.None : Displacement.Down
-        )
+        let dxdy = calculateDisplacement(displacement, onGround)
         
         switch dxdy {
         case (.Right, .None):
