@@ -39,8 +39,8 @@ class GameLevelScene: SKScene {
     // MARK: Physics World
     
     private var previousUpdateTime = NSTimeInterval()
-    // TODO: For 60fps must be 0.02, current value is for LOW FPS
-    private let maxDelta = 0.03
+    // For 60fps must be 0.02
+    private let maxDelta = 0.04
     
     private var lastTweetTime = NSTimeInterval()
     private var tweetOccurancePeriod = NSTimeInterval(15)

@@ -24,6 +24,18 @@ func CGPointMultiplyScalar(var point: CGPoint, float: CGFloat) -> CGPoint {
     return point
 }
 
+func *= (inout point: CGPoint, float: CGFloat) -> CGPoint {
+    point.x *= float
+    point.y *= float
+    return point
+}
+
+func * (var point: CGPoint, float: CGFloat) -> CGPoint {
+    point.x *= float
+    point.y *= float
+    return point
+}
+
 // Adds two CGPoints
 func CGPointAdd(var a: CGPoint, b: CGPoint) -> CGPoint {
     a.x += b.x

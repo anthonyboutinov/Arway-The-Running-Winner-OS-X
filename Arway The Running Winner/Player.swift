@@ -8,28 +8,75 @@
 
 import Foundation
 
+let timePerFrame = 0.4
+
 class Player: Updatable, HoldsItsSprite {
     
+    private enum Displacement {
+        case Left, Right, Up, Down, None
+    }
+    
+    private var oldDisplacement: (Displacement, Displacement) = (.None, .None)
+    
     // MARK: Physical properties and constraints
-    static private let minMovement = CGPoint(x: -120.0, y: -350.0)
-    static private let maxMovement = CGPoint(x: 120.0, y: 350.0)
+    static private let minMovement = CGPoint(x: -220.0, y: -350.0)
+    static private let maxMovement = CGPoint(x: 220.0, y: 350.0)
     static private let jumpForce = CGPoint(x: 0.0, y: 350.0)
     static private let jumpCutoff = CGFloat(150.0)
-    static private let slipperyCoefficient = CGFloat(0.6)
+    static private let slipperyCoefficient = CGFloat(0.9)
+    static private let movementMomentum = CGFloat(600.0)
+    static private let powerUpMovementMomentumMultiplier = CGFloat(2.25)
     
-    private let powerUpTime: NSTimeInterval = 30.0
+    static private let powerUpTime: NSTimeInterval = 30.0
+    
+    static private let downForce = CGFloat(-2.8799999999999999)
     
     // MARK: - Variables
     // MARK: Sprite
     
+    
     let sprite: SKSpriteNode
-    private let walkTextures: [SKTexture] = [
-        SKTexture(imageNamed: "HeroRa1"),
-        SKTexture(imageNamed: "HeroRa2")
-    ]
-    private let jumpTexture = SKTexture(imageNamed: "alienGreen_jump")
-    private let hurtTexture = SKTexture(imageNamed: "alienGreen_hurt")
-//    private var spriteWalkAnimationAction: SKAction?
+    
+    class Hulk {
+        static let walkRightTextures: [SKTexture] = [
+            SKTexture(imageNamed: "HulkRW1"),
+            SKTexture(imageNamed: "HulkRW2")
+        ]
+        static let walkLeftTextures: [SKTexture] = [
+            SKTexture(imageNamed: "HulkLW1"),
+            SKTexture(imageNamed: "HulkLW2")
+        ]
+        
+        static let jumpRightTexture = SKTexture(imageNamed: "HulkRJ")
+        static let jumpLeftTexture = SKTexture(imageNamed: "HulkLJ")
+        
+        static let fallRightTexture = SKTexture(imageNamed: "HulkRF")
+        static let fallLeftTexture = SKTexture(imageNamed: "HulkLF")
+        
+        static let stillTexture = SKTexture(imageNamed: "HulkS")
+    }
+    
+    class Arway {
+        static let walkRightTextures: [SKTexture] = [
+            SKTexture(imageNamed: "ArwayRW1"),
+            SKTexture(imageNamed: "ArwayRW2")
+        ]
+        static let walkLeftTextures: [SKTexture] = [
+            SKTexture(imageNamed: "ArwayLW1"),
+            SKTexture(imageNamed: "ArwayLW2")
+        ]
+        
+        static let jumpRightTexture = SKTexture(imageNamed: "ArwayRJ")
+        static let jumpLeftTexture = SKTexture(imageNamed: "ArwayLJ")
+        
+        static let fallRightTexture = SKTexture(imageNamed: "ArwayRF")
+        static let fallLeftTexture = SKTexture(imageNamed: "ArwayLF")
+        
+        static let stillTexture = SKTexture(imageNamed: "ArwayS")
+    }
+    
+    private var currentFrameTime = 0.0
+    private var currentTexture = 0
     
     // MARK: Physical properties
     
@@ -87,35 +134,42 @@ class Player: Updatable, HoldsItsSprite {
     
     required init(position: CGPoint) {
         
-        sprite = SKSpriteNode(texture: walkTextures[0])
+        sprite = SKSpriteNode(texture: Arway.stillTexture)
         sprite.zPosition = -21.0
         
-        let animateWalkAction = SKAction.animateWithTextures(walkTextures, timePerFrame: 0.40);
-        let spriteWalkAnimationAction = SKAction.repeatActionForever(animateWalkAction);
-        sprite.runAction(spriteWalkAnimationAction)
+//        let animateWalkAction = SKAction.animateWithTextures(walkRightTextures, timePerFrame: 0.40)
+//        let spriteWalkAnimationAction = SKAction.repeatActionForever(animateWalkAction)
+//        sprite.runAction(spriteWalkAnimationAction)
         
         desiredPosition = position
         sprite.position = position
     }
     
-    func update(delta deltaTimeInterval: CFTimeInterval) {
-        // Make delta to be CGFloat
+    func update(# delta: CFTimeInterval) {
+
+        let velocityStep = calculateVelocityStep(delta)
+        desiredPosition = CGPointAdd(desiredPosition, velocityStep)
+        updateFrameAmination(delta, displacement: velocityStep)
+        
+    }
+    
+    private func calculateVelocityStep(deltaTimeInterval: CFTimeInterval) -> CGPoint {
+        
         let delta = CGFloat(deltaTimeInterval as Double)
         
-        if powerUpTimeLeft > 0.0 {
-            powerUpTimeLeft -= deltaTimeInterval
-        }
-        
-        var forwardMove = CGPoint(x: 800.0, y: 0.0)
+        var forwardMove = CGPoint(x: Player.movementMomentum, y: 0.0)
         if backwardsMarch {
-            forwardMove = CGPoint(x: -800.0, y: 0.0)
+            forwardMove = CGPoint(x: -Player.movementMomentum, y: 0.0)
         }
-        if powerUpTimeLeft > 0.0 && forwardMarch {
-            forwardMove = CGPoint(x: 1200.0, y: 0.0)
-        }
-        let forwardMoveStep = CGPointMultiplyScalar(forwardMove, delta)
         
-        let gravityStep = CGPointMultiplyScalar(GameLevelScene.gravity, delta)
+        if !powerUpTimeLeft.isSignMinus {
+            powerUpTimeLeft -= deltaTimeInterval
+            forwardMove *= Player.powerUpMovementMomentumMultiplier
+        }
+        
+        let forwardMoveStep = forwardMove * delta
+        
+        let gravityStep = GameLevelScene.gravity * delta
         velocity = CGPointAdd(velocity, gravityStep)
         
         velocity.x *= Player.slipperyCoefficient
@@ -133,16 +187,128 @@ class Player: Updatable, HoldsItsSprite {
         if forwardMarch || backwardsMarch {
             velocity = CGPointAdd(velocity, forwardMoveStep)
         }
-
-        velocity = CGPoint(x: Clamp(velocity.x, Player.minMovement.x, Player.maxMovement.x), y: Clamp(velocity.y, Player.minMovement.y, Player.maxMovement.y))
         
-        let velocityStep = CGPointMultiplyScalar(velocity, delta)
-        desiredPosition = CGPointAdd(desiredPosition, velocityStep)
+        velocity = CGPoint(
+            x: Clamp(velocity.x, Player.minMovement.x, Player.maxMovement.x),
+            y: Clamp(velocity.y, Player.minMovement.y, Player.maxMovement.y)
+        )
+        
+        var velocityStep = velocity * delta
+        if abs(velocityStep.x) > 0.0 && abs(velocityStep.x) < 0.01 {
+            velocityStep.x = 0.0
+        }
+        return velocityStep
+        
+    }
+    
+    private func updateFrameAmination(delta: CFTimeInterval, var displacement: CGPoint) {
+        
+        var updateAlternatingAmination = false
+        
+        currentFrameTime += delta as Double
+        if currentFrameTime > timePerFrame {
+            currentFrameTime = 0.0
+            updateAlternatingAmination = true
+            currentTexture = currentTexture == 0 ? 1 : 0
+        }
+        
+        if abs(displacement.x) > 0.0 && abs(displacement.x) < 1.0 {
+            displacement.x = 0.0
+        }
+        
+        let dxdy = (
+            displacement.x > 0 ? Displacement.Right : displacement.x == 0 ? Displacement.None : Displacement.Left,
+            displacement.y > 0 ? Displacement.Up : onGround ? Displacement.None : Displacement.Down
+        )
+        
+        switch dxdy {
+        case (.Right, .None):
+            if powerUpTimeLeft > 0.0 {
+                sprite.texture = Hulk.walkRightTextures[currentTexture]
+            } else {
+                sprite.texture = Arway.walkRightTextures[currentTexture]
+            }
+        case (.Left, .None):
+            if powerUpTimeLeft > 0.0 {
+                sprite.texture = Hulk.walkLeftTextures[currentTexture]
+            } else {
+                sprite.texture = Arway.walkLeftTextures[currentTexture]
+            }
+        case (.None, .None):
+            if powerUpTimeLeft > 0.0 {
+                sprite.texture = Hulk.stillTexture
+            } else {
+                sprite.texture = Arway.stillTexture
+            }
+        case (.None, .Up):
+            if oldDisplacement.0 == .Left {
+                if powerUpTimeLeft > 0.0 {
+                    sprite.texture = Hulk.jumpLeftTexture
+                } else {
+                    sprite.texture = Arway.jumpLeftTexture
+                }
+            } else {
+                if powerUpTimeLeft > 0.0 {
+                    sprite.texture = Hulk.jumpRightTexture
+                } else {
+                    sprite.texture = Arway.jumpRightTexture
+                }
+            }
+        case (.None, .Down):
+            if oldDisplacement.0 == .Left {
+                if powerUpTimeLeft > 0.0 {
+                    sprite.texture = Hulk.fallLeftTexture
+                } else {
+                    sprite.texture = Arway.fallLeftTexture
+                }
+            } else {
+                if powerUpTimeLeft > 0.0 {
+                    sprite.texture = Hulk.fallRightTexture
+                } else {
+                    sprite.texture = Arway.fallRightTexture
+                }
+            }
+        case (.Left, .Up):
+            if powerUpTimeLeft > 0.0 {
+                sprite.texture = Hulk.jumpLeftTexture
+            } else {
+                sprite.texture = Arway.jumpLeftTexture
+            }
+        case (.Right, .Up):
+            if powerUpTimeLeft > 0.0 {
+                sprite.texture = Hulk.jumpRightTexture
+            } else {
+                sprite.texture = Arway.jumpRightTexture
+            }
+        case (.Left, .Down):
+            if powerUpTimeLeft > 0.0 {
+                sprite.texture = Hulk.fallLeftTexture
+            } else {
+                sprite.texture = Arway.fallLeftTexture
+            }
+        case (.Right, .Down):
+            if powerUpTimeLeft > 0.0 {
+                sprite.texture = Hulk.fallRightTexture
+            } else {
+                sprite.texture = Arway.fallRightTexture
+            }
+        default:
+            break
+        }
+        
+        oldDisplacement = dxdy
+
+    }
+    
+    var hasPowerUpOn: Bool {
+        return powerUpTimeLeft > 0.0
     }
     
     func applyPowerUp() {
-        sprite.runAction(Sound.powerupSound)
-        powerUpTimeLeft = powerUpTime
+        if Sound.soundEffects {
+            sprite.runAction(Sound.powerupSound)
+        }
+        powerUpTimeLeft = Player.powerUpTime
     }
     
 }
