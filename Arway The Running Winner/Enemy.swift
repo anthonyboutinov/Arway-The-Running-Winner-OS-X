@@ -9,5 +9,11 @@
 import Foundation
 
 protocol Enemy: Updatable, HoldsItsSprite {
-    func fire()
+    
+    var fireDelay: CFTimeInterval {get}
+    var fireRepeatDelay: CFTimeInterval {get}
+    
+    func fire() -> Updatable
+    
+    func isReadyToFire() -> Bool
 }

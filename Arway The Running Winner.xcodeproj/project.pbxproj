@@ -25,7 +25,6 @@
 		A84B59081AD986F300478227 /* MonsterCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59011AD986F300478227 /* MonsterCat.swift */; };
 		A84B59091AD986F300478227 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59021AD986F300478227 /* Tweet.swift */; };
 		A84B590A1AD986F300478227 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59031AD986F300478227 /* Player.swift */; };
-		A84B590B1AD986F300478227 /* PokerMad.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59041AD986F300478227 /* PokerMad.swift */; };
 		A84B59141AD9871000478227 /* WorldStateWithUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B590D1AD9871000478227 /* WorldStateWithUI.swift */; };
 		A84B59151AD9871000478227 /* WorldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B590E1AD9871000478227 /* WorldState.swift */; };
 		A84B59161AD9871000478227 /* UIDesigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B590F1AD9871000478227 /* UIDesigner.swift */; };
@@ -88,7 +87,6 @@
 		A84B59011AD986F300478227 /* MonsterCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterCat.swift; sourceTree = "<group>"; };
 		A84B59021AD986F300478227 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		A84B59031AD986F300478227 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		A84B59041AD986F300478227 /* PokerMad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokerMad.swift; sourceTree = "<group>"; };
 		A84B590D1AD9871000478227 /* WorldStateWithUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldStateWithUI.swift; sourceTree = "<group>"; };
 		A84B590E1AD9871000478227 /* WorldState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldState.swift; sourceTree = "<group>"; };
 		A84B590F1AD9871000478227 /* UIDesigner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDesigner.swift; sourceTree = "<group>"; };
@@ -232,7 +230,6 @@
 				A84B59021AD986F300478227 /* Tweet.swift */,
 				A84B59031AD986F300478227 /* Player.swift */,
 				A83D4A9E1AD9C20D0014A982 /* DisplacementAble.swift */,
-				A84B59041AD986F300478227 /* PokerMad.swift */,
 			);
 			name = "Interactive Elements";
 			sourceTree = "<group>";
@@ -421,7 +418,6 @@
 				A84B59071AD986F300478227 /* Enemy.swift in Sources */,
 				A84B59181AD9871000478227 /* Sound.swift in Sources */,
 				A84B58F91AD986CB00478227 /* MainMenuScene.swift in Sources */,
-				A84B590B1AD986F300478227 /* PokerMad.swift in Sources */,
 				A84B59231AD9873000478227 /* JSTileMapExtension.swift in Sources */,
 				A84B59191AD9871000478227 /* UserDefaults.swift in Sources */,
 				A84B58FB1AD986CB00478227 /* AboutScene.swift in Sources */,

@@ -10,9 +10,9 @@ import Foundation
 
 typealias TweetStruct = (author:String, text:String)
 
-let TweetDefaultSpeed = CGFloat(40.0)
-
 class Tweet: Updatable, HoldsItsSprite {
+    
+    static let defaultSpeed = CGFloat(52.0)
     
     let sprite: SKSpriteNode
     
@@ -29,7 +29,7 @@ class Tweet: Updatable, HoldsItsSprite {
     
     convenience required init(position: CGPoint) {
         let empty = TweetStruct("@unknownauthor", "[Relatively long censored text here]")
-        self.init(empty, position: position, speed: TweetDefaultSpeed)
+        self.init(empty, position: position, speed: Tweet.defaultSpeed)
     }
     
     required init(_ content:TweetStruct, position: CGPoint, speed: CGFloat) {

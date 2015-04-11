@@ -16,7 +16,7 @@ class DisplacementAble {
     
     var oldDisplacement: (Displacement, Displacement) = (.None, .None)
     
-    func calculateDisplacement(var displacement: CGPoint, _ onGound: Bool) -> (Displacement, Displacement) {
+    func calculateDisplacement(var displacement: CGPoint, _ onGround: Bool) -> (Displacement, Displacement) {
         if abs(displacement.x) > 0.0 && abs(displacement.x) < 1.0 {
             displacement.x = 0.0
         }

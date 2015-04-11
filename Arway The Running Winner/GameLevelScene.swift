@@ -39,11 +39,10 @@ class GameLevelScene: SKScene {
     // MARK: Physics World
     
     private var previousUpdateTime = NSTimeInterval()
-    // For 60fps must be 0.02
-    private let maxDelta = 0.04
+    private let maxDelta = 0.04 // Initial was 0.02
     
-    private var lastTweetTime = NSTimeInterval()
-    private var tweetOccurancePeriod = NSTimeInterval(15)
+    private var lastEnemyTime = NSTimeInterval()
+    private var enemyOccurancePeriod = NSTimeInterval(15)
     
     // MARK: UI elements
     
@@ -289,7 +288,7 @@ class GameLevelScene: SKScene {
     
     private func initGameOverStuff() {
         gameOverLabel.fontSize = 40
-        gameOverLabel.position = CGPoint(x: self.size.width / 2.0, y: self.size.height / 1.7)
+        gameOverLabel.position = CGPoint(x: self.size.width / 2.0, y: self.size.height / 1.5)
         gameOverLabel.hidden = true
         addChild(gameOverLabel)
         
@@ -315,14 +314,6 @@ class GameLevelScene: SKScene {
         if delta > maxDelta {
             delta = maxDelta
         }
-        let tweetDelta = currentTime - lastTweetTime
-        if tweetDelta > tweetOccurancePeriod {
-            lastTweetTime = currentTime
-            let tweet = Tweet(position: CGPoint(x: self.frame.width, y: self.frame.height * 0.5))
-            map.addChild(tweet.sprite)
-            updatables.append(tweet)
-            tweetsOnScreen.append(tweet)
-        }
         
         // FIXME: Delete this line when ready to test on real device (LOW FPS)
         delta *= 2.0
@@ -330,13 +321,50 @@ class GameLevelScene: SKScene {
         previousUpdateTime = currentTime
         
         // Update player and présent enemies
+        var i = 0
         for updatable in updatables {
+            if (updatable as! HoldsItsSprite).sprite.position.x < player.sprite.position.x - self.frame.width {
+               (updatable as! HoldsItsSprite).sprite.removeFromParent()
+                updatables.removeAtIndex(i)
+                // FIXME: Removed only from updatables
+            }
             updatable.update(delta: delta)
+            i++
         }
+        
+        handleEnemyProduction(currentTime)
         
         interactWithTheWorld()
         checkForWin()
         setViewPointCenter(player.position)
+    }
+    
+    private func handleEnemyProduction(currentTime: CFTimeInterval) {
+        
+        let delta = currentTime - lastEnemyTime
+        if delta > enemyOccurancePeriod {
+            lastEnemyTime = currentTime
+            
+            let random = 0.2 + CGFloat(Double(arc4random_uniform(6)) / 10.0)
+            let position = CGPoint(
+                x: player.sprite.position.x + self.frame.width * 0.7,
+                y: self.frame.height * random
+            )
+            let cat = MonsterCat(position: position)
+            map.addChild(cat.sprite)
+            updatables.append(cat)
+            enemies.append(cat)
+        }
+        
+        for enemy in enemies {
+            if enemy.isReadyToFire() {
+                let tweet = enemy.fire() as! Tweet
+                map.addChild(tweet.sprite)
+                updatables.append(tweet)
+                tweetsOnScreen.append(tweet)
+            }
+        }
+        
     }
     
     // MARK: Collisions
@@ -625,6 +653,7 @@ class GameLevelScene: SKScene {
         case .playerHasWon:
             gameOverLabel.text = "You Win!"
             replayButtonLabel.text = "Continue"
+            worldState.advanceToTheNextLevel()
             
         case .playerHasLost:
             if Sound.soundEffects {
