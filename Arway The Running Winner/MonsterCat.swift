@@ -29,6 +29,8 @@ class MonsterCat: Enemy {
         }
     }
     
+    var waitingToBeRemoved: Bool = false
+    
     var fireDelay: CFTimeInterval = MonsterCat.defaultFireDelay
     var fireRepeatDelay: CFTimeInterval = MonsterCat.defaultFireRepeatDelay
     

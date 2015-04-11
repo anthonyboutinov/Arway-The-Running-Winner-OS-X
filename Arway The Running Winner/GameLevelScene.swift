@@ -325,8 +325,9 @@ class GameLevelScene: SKScene {
         for updatable in updatables {
             if (updatable as! HoldsItsSprite).sprite.position.x < player.sprite.position.x - self.frame.width {
                (updatable as! HoldsItsSprite).sprite.removeFromParent()
-                updatables.removeAtIndex(i)
-                // FIXME: Removed only from updatables
+                var u = updatable
+                u.waitingToBeRemoved = true
+                updatables.removeAtIndex(i--)
             }
             updatable.update(delta: delta)
             i++
@@ -356,13 +357,18 @@ class GameLevelScene: SKScene {
             enemies.append(cat)
         }
         
+        var i = 0
         for enemy in enemies {
+            if enemy.waitingToBeRemoved {
+                enemies.removeAtIndex(i--)
+            }
             if enemy.isReadyToFire() {
                 let tweet = enemy.fire() as! Tweet
                 map.addChild(tweet.sprite)
                 updatables.append(tweet)
                 tweetsOnScreen.append(tweet)
             }
+            i++
         }
         
     }
@@ -408,9 +414,7 @@ class GameLevelScene: SKScene {
             
         }
         
-        if checkForCollisionsWithEnemies() {
-            return
-        }
+        checkForCollisionsWithEnemies()
         
         // Apply resolved position to the player's sprite
         player.position = player.desiredPosition
@@ -488,7 +492,6 @@ class GameLevelScene: SKScene {
         if gid != 0 {
             let tileRect = map.tileRect(fromTileCoord: tileCoord)
             if CGRectIntersectsRect(playerRect, tileRect) {
-                //                gameOver(.playerHasLost)
                 gameOverState = .playerHasLost
                 gameIsOver = true
                 return true
@@ -503,10 +506,15 @@ class GameLevelScene: SKScene {
                 return true
             }
         }
+        var i = 0
         for tweet in tweetsOnScreen {
+            if tweet.waitingToBeRemoved {
+                tweetsOnScreen.removeAtIndex(i--)
+            }
             if checkForCollisionsWithEnemy(tweet) {
                 return true
             }
+            i++
         }
         return false
     }
@@ -515,6 +523,14 @@ class GameLevelScene: SKScene {
         let rect = spriteHolder.sprite.frame
         let playerRect = player.collisionBoundingBox
         if CGRectIntersectsRect(playerRect, rect) {
+            if player.hasPowerUpOn {
+                spriteHolder.sprite.removeFromParent()
+                var s = (spriteHolder as! Updatable)
+                s.waitingToBeRemoved = true
+            } else {
+                gameOverState = .playerHasLost
+                gameIsOver = true
+            }
             return true
         }
         return false

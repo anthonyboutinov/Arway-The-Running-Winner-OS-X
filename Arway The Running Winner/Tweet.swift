@@ -27,6 +27,8 @@ class Tweet: Updatable, HoldsItsSprite {
         }
     }
     
+    var waitingToBeRemoved: Bool = false
+    
     convenience required init(position: CGPoint) {
         let empty = TweetStruct("@unknownauthor", "[Relatively long censored text here]")
         self.init(empty, position: position, speed: Tweet.defaultSpeed)

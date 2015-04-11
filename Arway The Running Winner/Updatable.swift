@@ -12,4 +12,6 @@ protocol Updatable {
     
     func update(delta deltaTimeInterval: CFTimeInterval)
     
+    var waitingToBeRemoved: Bool {set get}
+    
 }

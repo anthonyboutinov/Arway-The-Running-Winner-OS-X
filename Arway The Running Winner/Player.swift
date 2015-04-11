@@ -192,7 +192,7 @@ class Player: DisplacementAble, Updatable, HoldsItsSprite {
         
     }
     
-    
+    var waitingToBeRemoved: Bool = false
     
     private func updateFrameAmination(delta: CFTimeInterval, var displacement: CGPoint) {
         
