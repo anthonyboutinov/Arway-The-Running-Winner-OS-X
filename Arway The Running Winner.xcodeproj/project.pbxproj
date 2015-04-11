@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A83D4A6E1AD9909E0014A982 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A83D4A6D1AD9909E0014A982 /* libz.dylib */; };
+		A83D4A9D1AD999390014A982 /* NSUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D4A9C1AD999390014A982 /* NSUtils.swift */; };
 		A84B58D51AD9869500478227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B58D41AD9869500478227 /* AppDelegate.swift */; };
 		A84B58D71AD9869500478227 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B58D61AD9869500478227 /* GameScene.swift */; };
 		A84B58DE1AD9869500478227 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84B58DC1AD9869500478227 /* MainMenu.xib */; };
@@ -65,6 +66,7 @@
 
 /* Begin PBXFileReference section */
 		A83D4A6D1AD9909E0014A982 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A83D4A9C1AD999390014A982 /* NSUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUtils.swift; sourceTree = "<group>"; };
 		A84B58CF1AD9869500478227 /* Arway The Running Winner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arway The Running Winner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A84B58D31AD9869500478227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A84B58D41AD9869500478227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				A84B590F1AD9871000478227 /* UIDesigner.swift */,
 				A84B59111AD9871000478227 /* Sound.swift */,
 				A84B59121AD9871000478227 /* UserDefaults.swift */,
+				A83D4A9C1AD999390014A982 /* NSUtils.swift */,
 				A84B59131AD9871000478227 /* SKUtils.swift */,
 				A84B593E1AD987BA00478227 /* Levels */,
 				A84B594B1AD987D400478227 /* Sounds */,
@@ -407,6 +410,7 @@
 				A84B58FA1AD986CB00478227 /* PlayScene.swift in Sources */,
 				A84B591A1AD9871000478227 /* SKUtils.swift in Sources */,
 				A84B590A1AD986F300478227 /* Player.swift in Sources */,
+				A83D4A9D1AD999390014A982 /* NSUtils.swift in Sources */,
 				A84B58D51AD9869500478227 /* AppDelegate.swift in Sources */,
 				A84B59141AD9871000478227 /* WorldStateWithUI.swift in Sources */,
 				A84B59051AD986F300478227 /* Updatable.swift in Sources */,

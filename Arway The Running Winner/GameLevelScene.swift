@@ -124,7 +124,47 @@ class GameLevelScene: SKScene {
         worldState.addChildrenToScene()
     }
     
-    // MARK: Touches
+    // MARK: Keyboard input
+    
+    override func keyDown(theEvent: NSEvent) {
+        
+        switch theEvent.character {
+        case NSUpArrowFunctionKey:
+            player.mightAsWellJump = true
+            return
+        case NSLeftArrowFunctionKey:
+            player.backwardsMarch = true
+            return
+        case NSRightArrowFunctionKey:
+            player.forwardMarch = true
+            return
+        default:
+            break
+        }
+        super.keyDown(theEvent)
+        
+    }
+    
+    override func keyUp(theEvent: NSEvent) {
+        
+        switch theEvent.character {
+        case NSUpArrowFunctionKey:
+            player.mightAsWellJump = false
+            return
+        case NSLeftArrowFunctionKey:
+            player.backwardsMarch = false
+            return
+        case NSRightArrowFunctionKey:
+            player.forwardMarch = false
+            return
+        default:
+            break
+        }
+        super.keyDown(theEvent)
+        
+    }
+    
+    // MARK: Mouse input
     
     override func mouseDown(theEvent: NSEvent) {
         let location = theEvent.locationInNode(self)
@@ -146,18 +186,6 @@ class GameLevelScene: SKScene {
                     replay()
                 case mainMenuButtonNextToReplayButton:
                     goToTheMainMenuScene()
-                default: break
-                }
-            } else {
-                switch node {
-                case upButton:
-                    player.mightAsWellJump = true
-                case leftButton:
-                    player.backwardsMarch = true
-                case rightButton:
-                    player.forwardMarch = true
-                case pauseButton:
-                    gameIsPaused = true
                 default: break
                 }
             }
@@ -467,24 +495,25 @@ class GameLevelScene: SKScene {
     private func handleNonCollidableItems(tileCoord: CGPoint, _ playerRect: CGRect) {
         let gid = map.tileGID(atTileCoord: tileCoord, forLayer: noncollidableItems)
         if gid != 0 {
-            let tile = noncollidableItems.tileAtCoord(tileCoord)
-            
-            // If tile has been removed from the view,
-            if let _ = tile.userData?[Properties.hasBeenRemovedFromTheView.rawValue] {
-                // Then skip it.
-                return
-            }
-            
-            let tileRect = map.tileRect(fromTileCoord: tileCoord)
-            if CGRectIntersectsRect(playerRect, tileRect) {
-                if let properties = map.properties(forGID: gid) {
-                    checkContainsPropertyOfATile(properties)
+            if let tile = noncollidableItems.tileAtCoord(tileCoord) {
+                
+                // If tile has been removed from the view,
+                if let _ = tile.userData?[Properties.hasBeenRemovedFromTheView.rawValue] {
+                    // Then skip it.
+                    return
                 }
                 
-                // Add flag to the tile
-                tile.userData = [Properties.hasBeenRemovedFromTheView.rawValue:true]
-                tile.removeFromParent()
-                
+                let tileRect = map.tileRect(fromTileCoord: tileCoord)
+                if CGRectIntersectsRect(playerRect, tileRect) {
+                    if let properties = map.properties(forGID: gid) {
+                        checkContainsPropertyOfATile(properties)
+                    }
+                    
+                    // Add flag to the tile
+                    tile.userData = [Properties.hasBeenRemovedFromTheView.rawValue:true]
+                    tile.removeFromParent()
+                    
+                }
             }
         }
     }
