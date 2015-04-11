@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A83D4A6E1AD9909E0014A982 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A83D4A6D1AD9909E0014A982 /* libz.dylib */; };
+		A84B58D51AD9869500478227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B58D41AD9869500478227 /* AppDelegate.swift */; };
+		A84B58D71AD9869500478227 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B58D61AD9869500478227 /* GameScene.swift */; };
+		A84B58DE1AD9869500478227 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84B58DC1AD9869500478227 /* MainMenu.xib */; };
+		A84B58EA1AD9869500478227 /* Arway_The_Running_WinnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B58E91AD9869500478227 /* Arway_The_Running_WinnerTests.swift */; };
+		A84B58F81AD986CB00478227 /* GameLevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B58F31AD986CB00478227 /* GameLevelScene.swift */; };
+		A84B58F91AD986CB00478227 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B58F41AD986CB00478227 /* MainMenuScene.swift */; };
+		A84B58FA1AD986CB00478227 /* PlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B58F51AD986CB00478227 /* PlayScene.swift */; };
+		A84B58FB1AD986CB00478227 /* AboutScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B58F61AD986CB00478227 /* AboutScene.swift */; };
+		A84B58FC1AD986CB00478227 /* SettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B58F71AD986CB00478227 /* SettingsScene.swift */; };
+		A84B59051AD986F300478227 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B58FE1AD986F300478227 /* Updatable.swift */; };
+		A84B59061AD986F300478227 /* HoldsItsSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B58FF1AD986F300478227 /* HoldsItsSprite.swift */; };
+		A84B59071AD986F300478227 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59001AD986F300478227 /* Enemy.swift */; };
+		A84B59081AD986F300478227 /* MonsterCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59011AD986F300478227 /* MonsterCat.swift */; };
+		A84B59091AD986F300478227 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59021AD986F300478227 /* Tweet.swift */; };
+		A84B590A1AD986F300478227 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59031AD986F300478227 /* Player.swift */; };
+		A84B590B1AD986F300478227 /* PokerMad.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59041AD986F300478227 /* PokerMad.swift */; };
+		A84B59141AD9871000478227 /* WorldStateWithUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B590D1AD9871000478227 /* WorldStateWithUI.swift */; };
+		A84B59151AD9871000478227 /* WorldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B590E1AD9871000478227 /* WorldState.swift */; };
+		A84B59161AD9871000478227 /* UIDesigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B590F1AD9871000478227 /* UIDesigner.swift */; };
+		A84B59181AD9871000478227 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59111AD9871000478227 /* Sound.swift */; };
+		A84B59191AD9871000478227 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59121AD9871000478227 /* UserDefaults.swift */; };
+		A84B591A1AD9871000478227 /* SKUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B59131AD9871000478227 /* SKUtils.swift */; };
+		A84B591C1AD9871C00478227 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A84B591B1AD9871C00478227 /* Images.xcassets */; };
+		A84B59231AD9873000478227 /* JSTileMapExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B591E1AD9873000478227 /* JSTileMapExtension.swift */; };
+		A84B59301AD9879F00478227 /* city_spritesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = A84B59271AD9879F00478227 /* city_spritesheet.png */; };
+		A84B59311AD9879F00478227 /* city_spritesheet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A84B59281AD9879F00478227 /* city_spritesheet@2x.png */; };
+		A84B59321AD9879F00478227 /* pokerMad.png in Resources */ = {isa = PBXBuildFile; fileRef = A84B59291AD9879F00478227 /* pokerMad.png */; };
+		A84B59331AD9879F00478227 /* pokerMad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A84B592A1AD9879F00478227 /* pokerMad@2x.png */; };
+		A84B59341AD9879F00478227 /* coin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A84B592B1AD9879F00478227 /* coin@2x.png */; };
+		A84B59351AD9879F00478227 /* coin.png in Resources */ = {isa = PBXBuildFile; fileRef = A84B592C1AD9879F00478227 /* coin.png */; };
+		A84B59361AD9879F00478227 /* bush.png in Resources */ = {isa = PBXBuildFile; fileRef = A84B592D1AD9879F00478227 /* bush.png */; };
+		A84B59371AD9879F00478227 /* tiles_spritesheet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A84B592E1AD9879F00478227 /* tiles_spritesheet@2x.png */; };
+		A84B59381AD9879F00478227 /* tiles_spritesheet.png in Resources */ = {isa = PBXBuildFile; fileRef = A84B592F1AD9879F00478227 /* tiles_spritesheet.png */; };
+		A84B593C1AD987B600478227 /* World1Level2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = A84B593A1AD987B600478227 /* World1Level2.tmx */; };
+		A84B593D1AD987B600478227 /* World1Level1.tmx in Resources */ = {isa = PBXBuildFile; fileRef = A84B593B1AD987B600478227 /* World1Level1.tmx */; };
+		A84B59451AD987CF00478227 /* powerup.wav in Resources */ = {isa = PBXBuildFile; fileRef = A84B593F1AD987CF00478227 /* powerup.wav */; };
+		A84B59461AD987CF00478227 /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = A84B59401AD987CF00478227 /* jump.wav */; };
+		A84B59471AD987CF00478227 /* menu.wav in Resources */ = {isa = PBXBuildFile; fileRef = A84B59411AD987CF00478227 /* menu.wav */; };
+		A84B59481AD987CF00478227 /* coin.wav in Resources */ = {isa = PBXBuildFile; fileRef = A84B59421AD987CF00478227 /* coin.wav */; };
+		A84B59491AD987CF00478227 /* 6dfcd1ecc4db.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A84B59431AD987CF00478227 /* 6dfcd1ecc4db.mp3 */; };
+		A84B594A1AD987CF00478227 /* hurt.wav in Resources */ = {isa = PBXBuildFile; fileRef = A84B59441AD987CF00478227 /* hurt.wav */; };
+		A84B59501AD98CA300478227 /* JSTileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A84B594D1AD98CA300478227 /* JSTileMap.m */; };
+		A84B59511AD98CA300478227 /* LFCGzipUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A84B594F1AD98CA300478227 /* LFCGzipUtility.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A84B58E41AD9869500478227 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A84B58C71AD9869500478227 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A84B58CE1AD9869500478227;
+			remoteInfo = "Arway The Running Winner";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A83D4A6D1AD9909E0014A982 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A84B58CF1AD9869500478227 /* Arway The Running Winner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arway The Running Winner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A84B58D31AD9869500478227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A84B58D41AD9869500478227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A84B58D61AD9869500478227 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		A84B58DD1AD9869500478227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		A84B58E31AD9869500478227 /* Arway The Running WinnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Arway The Running WinnerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A84B58E81AD9869500478227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A84B58E91AD9869500478227 /* Arway_The_Running_WinnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arway_The_Running_WinnerTests.swift; sourceTree = "<group>"; };
+		A84B58F31AD986CB00478227 /* GameLevelScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLevelScene.swift; sourceTree = "<group>"; };
+		A84B58F41AD986CB00478227 /* MainMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
+		A84B58F51AD986CB00478227 /* PlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayScene.swift; sourceTree = "<group>"; };
+		A84B58F61AD986CB00478227 /* AboutScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutScene.swift; sourceTree = "<group>"; };
+		A84B58F71AD986CB00478227 /* SettingsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsScene.swift; sourceTree = "<group>"; };
+		A84B58FE1AD986F300478227 /* Updatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Updatable.swift; sourceTree = "<group>"; };
+		A84B58FF1AD986F300478227 /* HoldsItsSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoldsItsSprite.swift; sourceTree = "<group>"; };
+		A84B59001AD986F300478227 /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		A84B59011AD986F300478227 /* MonsterCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterCat.swift; sourceTree = "<group>"; };
+		A84B59021AD986F300478227 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		A84B59031AD986F300478227 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		A84B59041AD986F300478227 /* PokerMad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokerMad.swift; sourceTree = "<group>"; };
+		A84B590D1AD9871000478227 /* WorldStateWithUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldStateWithUI.swift; sourceTree = "<group>"; };
+		A84B590E1AD9871000478227 /* WorldState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldState.swift; sourceTree = "<group>"; };
+		A84B590F1AD9871000478227 /* UIDesigner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDesigner.swift; sourceTree = "<group>"; };
+		A84B59111AD9871000478227 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		A84B59121AD9871000478227 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		A84B59131AD9871000478227 /* SKUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKUtils.swift; sourceTree = "<group>"; };
+		A84B591B1AD9871C00478227 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A84B591D1AD9873000478227 /* Arway The Running Winner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Arway The Running Winner-Bridging-Header.h"; sourceTree = "<group>"; };
+		A84B591E1AD9873000478227 /* JSTileMapExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSTileMapExtension.swift; sourceTree = "<group>"; };
+		A84B59271AD9879F00478227 /* city_spritesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = city_spritesheet.png; sourceTree = "<group>"; };
+		A84B59281AD9879F00478227 /* city_spritesheet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "city_spritesheet@2x.png"; sourceTree = "<group>"; };
+		A84B59291AD9879F00478227 /* pokerMad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pokerMad.png; sourceTree = "<group>"; };
+		A84B592A1AD9879F00478227 /* pokerMad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pokerMad@2x.png"; sourceTree = "<group>"; };
+		A84B592B1AD9879F00478227 /* coin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coin@2x.png"; sourceTree = "<group>"; };
+		A84B592C1AD9879F00478227 /* coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin.png; sourceTree = "<group>"; };
+		A84B592D1AD9879F00478227 /* bush.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bush.png; sourceTree = "<group>"; };
+		A84B592E1AD9879F00478227 /* tiles_spritesheet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tiles_spritesheet@2x.png"; sourceTree = "<group>"; };
+		A84B592F1AD9879F00478227 /* tiles_spritesheet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tiles_spritesheet.png; sourceTree = "<group>"; };
+		A84B593A1AD987B600478227 /* World1Level2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = World1Level2.tmx; sourceTree = "<group>"; };
+		A84B593B1AD987B600478227 /* World1Level1.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = World1Level1.tmx; sourceTree = "<group>"; };
+		A84B593F1AD987CF00478227 /* powerup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = powerup.wav; sourceTree = "<group>"; };
+		A84B59401AD987CF00478227 /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump.wav; sourceTree = "<group>"; };
+		A84B59411AD987CF00478227 /* menu.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = menu.wav; sourceTree = "<group>"; };
+		A84B59421AD987CF00478227 /* coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coin.wav; sourceTree = "<group>"; };
+		A84B59431AD987CF00478227 /* 6dfcd1ecc4db.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 6dfcd1ecc4db.mp3; sourceTree = "<group>"; };
+		A84B59441AD987CF00478227 /* hurt.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hurt.wav; sourceTree = "<group>"; };
+		A84B594C1AD98CA300478227 /* JSTileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTileMap.h; sourceTree = "<group>"; };
+		A84B594D1AD98CA300478227 /* JSTileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTileMap.m; sourceTree = "<group>"; };
+		A84B594E1AD98CA300478227 /* LFCGzipUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFCGzipUtility.h; sourceTree = "<group>"; };
+		A84B594F1AD98CA300478227 /* LFCGzipUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFCGzipUtility.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A84B58CC1AD9869500478227 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A83D4A6E1AD9909E0014A982 /* libz.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A84B58E01AD9869500478227 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A84B58C61AD9869500478227 = {
+			isa = PBXGroup;
+			children = (
+				A84B58D11AD9869500478227 /* Arway The Running Winner */,
+				A84B58E61AD9869500478227 /* Arway The Running WinnerTests */,
+				A84B58D01AD9869500478227 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A84B58D01AD9869500478227 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A84B58CF1AD9869500478227 /* Arway The Running Winner.app */,
+				A84B58E31AD9869500478227 /* Arway The Running WinnerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A84B58D11AD9869500478227 /* Arway The Running Winner */ = {
+			isa = PBXGroup;
+			children = (
+				A84B58D41AD9869500478227 /* AppDelegate.swift */,
+				A84B58FD1AD986D400478227 /* Scenes */,
+				A84B590C1AD9870000478227 /* Interactive Elements */,
+				A84B590D1AD9871000478227 /* WorldStateWithUI.swift */,
+				A84B590E1AD9871000478227 /* WorldState.swift */,
+				A84B590F1AD9871000478227 /* UIDesigner.swift */,
+				A84B59111AD9871000478227 /* Sound.swift */,
+				A84B59121AD9871000478227 /* UserDefaults.swift */,
+				A84B59131AD9871000478227 /* SKUtils.swift */,
+				A84B593E1AD987BA00478227 /* Levels */,
+				A84B594B1AD987D400478227 /* Sounds */,
+				A84B59391AD987A600478227 /* Spritesheets */,
+				A84B591B1AD9871C00478227 /* Images.xcassets */,
+				A84B59261AD9873900478227 /* JSTileMap */,
+				A84B591D1AD9873000478227 /* Arway The Running Winner-Bridging-Header.h */,
+				A84B58D21AD9869500478227 /* Supporting Files */,
+			);
+			path = "Arway The Running Winner";
+			sourceTree = "<group>";
+		};
+		A84B58D21AD9869500478227 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A83D4A6D1AD9909E0014A982 /* libz.dylib */,
+				A84B58DC1AD9869500478227 /* MainMenu.xib */,
+				A84B58D31AD9869500478227 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A84B58E61AD9869500478227 /* Arway The Running WinnerTests */ = {
+			isa = PBXGroup;
+			children = (
+				A84B58E91AD9869500478227 /* Arway_The_Running_WinnerTests.swift */,
+				A84B58E71AD9869500478227 /* Supporting Files */,
+			);
+			path = "Arway The Running WinnerTests";
+			sourceTree = "<group>";
+		};
+		A84B58E71AD9869500478227 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A84B58E81AD9869500478227 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A84B58FD1AD986D400478227 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A84B58F31AD986CB00478227 /* GameLevelScene.swift */,
+				A84B58F41AD986CB00478227 /* MainMenuScene.swift */,
+				A84B58F51AD986CB00478227 /* PlayScene.swift */,
+				A84B58F61AD986CB00478227 /* AboutScene.swift */,
+				A84B58F71AD986CB00478227 /* SettingsScene.swift */,
+				A84B58D61AD9869500478227 /* GameScene.swift */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		A84B590C1AD9870000478227 /* Interactive Elements */ = {
+			isa = PBXGroup;
+			children = (
+				A84B58FE1AD986F300478227 /* Updatable.swift */,
+				A84B58FF1AD986F300478227 /* HoldsItsSprite.swift */,
+				A84B59001AD986F300478227 /* Enemy.swift */,
+				A84B59011AD986F300478227 /* MonsterCat.swift */,
+				A84B59021AD986F300478227 /* Tweet.swift */,
+				A84B59031AD986F300478227 /* Player.swift */,
+				A84B59041AD986F300478227 /* PokerMad.swift */,
+			);
+			name = "Interactive Elements";
+			sourceTree = "<group>";
+		};
+		A84B59261AD9873900478227 /* JSTileMap */ = {
+			isa = PBXGroup;
+			children = (
+				A84B594C1AD98CA300478227 /* JSTileMap.h */,
+				A84B594D1AD98CA300478227 /* JSTileMap.m */,
+				A84B594E1AD98CA300478227 /* LFCGzipUtility.h */,
+				A84B594F1AD98CA300478227 /* LFCGzipUtility.m */,
+				A84B591E1AD9873000478227 /* JSTileMapExtension.swift */,
+			);
+			name = JSTileMap;
+			sourceTree = "<group>";
+		};
+		A84B59391AD987A600478227 /* Spritesheets */ = {
+			isa = PBXGroup;
+			children = (
+				A84B59271AD9879F00478227 /* city_spritesheet.png */,
+				A84B59281AD9879F00478227 /* city_spritesheet@2x.png */,
+				A84B59291AD9879F00478227 /* pokerMad.png */,
+				A84B592A1AD9879F00478227 /* pokerMad@2x.png */,
+				A84B592B1AD9879F00478227 /* coin@2x.png */,
+				A84B592C1AD9879F00478227 /* coin.png */,
+				A84B592D1AD9879F00478227 /* bush.png */,
+				A84B592E1AD9879F00478227 /* tiles_spritesheet@2x.png */,
+				A84B592F1AD9879F00478227 /* tiles_spritesheet.png */,
+			);
+			name = Spritesheets;
+			sourceTree = "<group>";
+		};
+		A84B593E1AD987BA00478227 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				A84B593A1AD987B600478227 /* World1Level2.tmx */,
+				A84B593B1AD987B600478227 /* World1Level1.tmx */,
+			);
+			name = Levels;
+			sourceTree = "<group>";
+		};
+		A84B594B1AD987D400478227 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				A84B593F1AD987CF00478227 /* powerup.wav */,
+				A84B59401AD987CF00478227 /* jump.wav */,
+				A84B59411AD987CF00478227 /* menu.wav */,
+				A84B59421AD987CF00478227 /* coin.wav */,
+				A84B59431AD987CF00478227 /* 6dfcd1ecc4db.mp3 */,
+				A84B59441AD987CF00478227 /* hurt.wav */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A84B58CE1AD9869500478227 /* Arway The Running Winner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A84B58ED1AD9869500478227 /* Build configuration list for PBXNativeTarget "Arway The Running Winner" */;
+			buildPhases = (
+				A84B58CB1AD9869500478227 /* Sources */,
+				A84B58CC1AD9869500478227 /* Frameworks */,
+				A84B58CD1AD9869500478227 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Arway The Running Winner";
+			productName = "Arway The Running Winner";
+			productReference = A84B58CF1AD9869500478227 /* Arway The Running Winner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A84B58E21AD9869500478227 /* Arway The Running WinnerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A84B58F01AD9869500478227 /* Build configuration list for PBXNativeTarget "Arway The Running WinnerTests" */;
+			buildPhases = (
+				A84B58DF1AD9869500478227 /* Sources */,
+				A84B58E01AD9869500478227 /* Frameworks */,
+				A84B58E11AD9869500478227 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A84B58E51AD9869500478227 /* PBXTargetDependency */,
+			);
+			name = "Arway The Running WinnerTests";
+			productName = "Arway The Running WinnerTests";
+			productReference = A84B58E31AD9869500478227 /* Arway The Running WinnerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A84B58C71AD9869500478227 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Anthony Boutinov";
+				TargetAttributes = {
+					A84B58CE1AD9869500478227 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					A84B58E21AD9869500478227 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = A84B58CE1AD9869500478227;
+					};
+				};
+			};
+			buildConfigurationList = A84B58CA1AD9869500478227 /* Build configuration list for PBXProject "Arway The Running Winner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A84B58C61AD9869500478227;
+			productRefGroup = A84B58D01AD9869500478227 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A84B58CE1AD9869500478227 /* Arway The Running Winner */,
+				A84B58E21AD9869500478227 /* Arway The Running WinnerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A84B58CD1AD9869500478227 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A84B59461AD987CF00478227 /* jump.wav in Resources */,
+				A84B59311AD9879F00478227 /* city_spritesheet@2x.png in Resources */,
+				A84B59341AD9879F00478227 /* coin@2x.png in Resources */,
+				A84B59361AD9879F00478227 /* bush.png in Resources */,
+				A84B58DE1AD9869500478227 /* MainMenu.xib in Resources */,
+				A84B591C1AD9871C00478227 /* Images.xcassets in Resources */,
+				A84B59381AD9879F00478227 /* tiles_spritesheet.png in Resources */,
+				A84B593D1AD987B600478227 /* World1Level1.tmx in Resources */,
+				A84B59451AD987CF00478227 /* powerup.wav in Resources */,
+				A84B59481AD987CF00478227 /* coin.wav in Resources */,
+				A84B594A1AD987CF00478227 /* hurt.wav in Resources */,
+				A84B59471AD987CF00478227 /* menu.wav in Resources */,
+				A84B59351AD9879F00478227 /* coin.png in Resources */,
+				A84B59331AD9879F00478227 /* pokerMad@2x.png in Resources */,
+				A84B59491AD987CF00478227 /* 6dfcd1ecc4db.mp3 in Resources */,
+				A84B59371AD9879F00478227 /* tiles_spritesheet@2x.png in Resources */,
+				A84B59321AD9879F00478227 /* pokerMad.png in Resources */,
+				A84B593C1AD987B600478227 /* World1Level2.tmx in Resources */,
+				A84B59301AD9879F00478227 /* city_spritesheet.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A84B58E11AD9869500478227 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A84B58CB1AD9869500478227 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A84B58D71AD9869500478227 /* GameScene.swift in Sources */,
+				A84B59061AD986F300478227 /* HoldsItsSprite.swift in Sources */,
+				A84B59161AD9871000478227 /* UIDesigner.swift in Sources */,
+				A84B59501AD98CA300478227 /* JSTileMap.m in Sources */,
+				A84B58FC1AD986CB00478227 /* SettingsScene.swift in Sources */,
+				A84B59091AD986F300478227 /* Tweet.swift in Sources */,
+				A84B59151AD9871000478227 /* WorldState.swift in Sources */,
+				A84B58FA1AD986CB00478227 /* PlayScene.swift in Sources */,
+				A84B591A1AD9871000478227 /* SKUtils.swift in Sources */,
+				A84B590A1AD986F300478227 /* Player.swift in Sources */,
+				A84B58D51AD9869500478227 /* AppDelegate.swift in Sources */,
+				A84B59141AD9871000478227 /* WorldStateWithUI.swift in Sources */,
+				A84B59051AD986F300478227 /* Updatable.swift in Sources */,
+				A84B59071AD986F300478227 /* Enemy.swift in Sources */,
+				A84B59181AD9871000478227 /* Sound.swift in Sources */,
+				A84B58F91AD986CB00478227 /* MainMenuScene.swift in Sources */,
+				A84B590B1AD986F300478227 /* PokerMad.swift in Sources */,
+				A84B59231AD9873000478227 /* JSTileMapExtension.swift in Sources */,
+				A84B59191AD9871000478227 /* UserDefaults.swift in Sources */,
+				A84B58FB1AD986CB00478227 /* AboutScene.swift in Sources */,
+				A84B59081AD986F300478227 /* MonsterCat.swift in Sources */,
+				A84B59511AD98CA300478227 /* LFCGzipUtility.m in Sources */,
+				A84B58F81AD986CB00478227 /* GameLevelScene.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A84B58DF1AD9869500478227 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A84B58EA1AD9869500478227 /* Arway_The_Running_WinnerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A84B58E51AD9869500478227 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A84B58CE1AD9869500478227 /* Arway The Running Winner */;
+			targetProxy = A84B58E41AD9869500478227 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A84B58DC1AD9869500478227 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A84B58DD1AD9869500478227 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A84B58EB1AD9869500478227 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A84B58EC1AD9869500478227 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A84B58EE1AD9869500478227 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = NO;
+				INFOPLIST_FILE = "Arway The Running Winner/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Arway The Running Winner/Arway The Running Winner-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A84B58EF1AD9869500478227 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = NO;
+				INFOPLIST_FILE = "Arway The Running Winner/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Arway The Running Winner/Arway The Running Winner-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		A84B58F11AD9869500478227 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Arway The Running WinnerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Arway The Running Winner.app/Contents/MacOS/Arway The Running Winner";
+			};
+			name = Debug;
+		};
+		A84B58F21AD9869500478227 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Arway The Running WinnerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Arway The Running Winner.app/Contents/MacOS/Arway The Running Winner";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A84B58CA1AD9869500478227 /* Build configuration list for PBXProject "Arway The Running Winner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A84B58EB1AD9869500478227 /* Debug */,
+				A84B58EC1AD9869500478227 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A84B58ED1AD9869500478227 /* Build configuration list for PBXNativeTarget "Arway The Running Winner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A84B58EE1AD9869500478227 /* Debug */,
+				A84B58EF1AD9869500478227 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A84B58F01AD9869500478227 /* Build configuration list for PBXNativeTarget "Arway The Running WinnerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A84B58F11AD9869500478227 /* Debug */,
+				A84B58F21AD9869500478227 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A84B58C71AD9869500478227 /* Project object */;
+}

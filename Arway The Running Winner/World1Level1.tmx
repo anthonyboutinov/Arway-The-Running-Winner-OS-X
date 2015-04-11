@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="100" height="20" tilewidth="35" tileheight="35" backgroundcolor="#83cacb">
+ <tileset firstgid="1" name="tiles_spritesheet" tilewidth="35" tileheight="35" spacing="1">
+  <image source="tiles_spritesheet.png" width="457" height="468"/>
+  <tile id="0">
+   <properties>
+    <property name="durability" value="4"/>
+    <property name="isBouncy" value="1"/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="contains" value="powerUp"/>
+    <property name="durability" value="1"/>
+    <property name="isBouncy" value="1"/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="kind" value="torch"/>
+   </properties>
+  </tile>
+  <tile id="37">
+   <properties>
+    <property name="kind" value="torch"/>
+   </properties>
+  </tile>
+  <tile id="72">
+   <properties>
+    <property name="durability" value="1"/>
+   </properties>
+  </tile>
+  <tile id="96">
+   <properties>
+    <property name="contains" value="coin"/>
+    <property name="durability" value="5"/>
+    <property name="isBouncy" value="1"/>
+   </properties>
+  </tile>
+  <tile id="120">
+   <properties>
+    <property name="contains" value="coin"/>
+    <property name="durability" value="1"/>
+    <property name="isBouncy" value="1"/>
+   </properties>
+  </tile>
+  <tile id="124">
+   <properties>
+    <property name="isBouncy" value="1"/>
+   </properties>
+  </tile>
+  <tile id="132">
+   <properties>
+    <property name="durability" value="3"/>
+   </properties>
+  </tile>
+  <tile id="144">
+   <properties>
+    <property name="durability" value="2"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="157" name="coin" tilewidth="35" tileheight="35">
+  <image source="coin.png" width="35" height="35"/>
+  <tile id="0">
+   <properties>
+    <property name="contains" value="coin"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="158" name="pokerMad" tilewidth="24" tileheight="73">
+  <image source="pokerMad.png" width="24" height="73"/>
+  <tile id="0">
+   <properties>
+    <property name="enemyClass" value="pokerMad"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Background" width="100" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3RMQ6AMAwDwDyoD+BHXfj/zMpQhiBLVOJOym7HVQAAAAAAAPDesbjz00T/ttrjfh0zG20Ls3q9Uj9I7DFCWXYyqtcr9YOnPS5HrLvhQB8AAA==
+  </data>
+ </layer>
+ <layer name="BackgroundDecor" width="100" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3OsQkAIAxFwUxhYZn9h7RxAFGSQu4gZfgvAgAAAAAAAOrlvq6t8fjf2Xsi465r1uTAlxZVYb/tQB8AAA==
+  </data>
+ </layer>
+ <layer name="Walls" width="100" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3UPQ6AIAyG4Q5MnsNjaeLoAbyMt3XRQeJPCwoi75M0Lo0l/QgiAAAAAAAAAHJoch/gB5z3DUUW8Zzs8wjNpMYsRmWfdqf+/qd1xlad4h+NfD+L9qCGRLOd6O75VV/su1WKt3Lx35u7TDQ9NRkNZe2PrdBzhsxIvYMzs6Gs/SWUdQ9P7aA/yWMBYTmo2UAfAAA=
+  </data>
+ </layer>
+ <layer name="Hazards" width="100" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3BAQEAAACAkP6v7ggKAAAAAAAAABhk6EtKQB8AAA==
+  </data>
+ </layer>
+ <layer name="CollidableItems" width="100" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3UsQnAMAwEQK2R8TyGBsgA2dhpUtmpQpCKO1Cl4h8EigAAAAAAvjjuyeoS0NxVXaCB3Z/Il934Ke/hHj2c1QUAWEzdicijQB8AAA==
+  </data>
+ </layer>
+ <layer name="NoncollidableItems" width="100" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3U0Q6AIAiFYd//HXjXbsthgg7R+r/NVRdgclalAAAAAIBOsl8AD+SxF/LwiZ4XedhJdY3cA++kcR+5z1fNnnHljHbIQ24rqv9onVZr6VfX9p49vU+XcUYxLq0OPp7v4295zP7rRmt7M47Io1V3eoZAlguVU+zUQB8AAA==
+  </data>
+ </layer>
+ <layer name="Foreground" width="100" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3PMQ0AAAgEsdeCf5EsWGCBNjkBlwAAAAAAAMCemr6o/HuGKxpfGpzqQB8AAA==
+  </data>
+ </layer>
+</map>
