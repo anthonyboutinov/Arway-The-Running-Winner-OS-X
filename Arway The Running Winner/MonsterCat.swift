@@ -29,12 +29,20 @@ class MonsterCat: Enemy {
         }
     }
     
+    var mainColor: NSColor!
+    
     var waitingToBeRemoved: Bool = false
     
     var fireDelay: CFTimeInterval = MonsterCat.defaultFireDelay
     var fireRepeatDelay: CFTimeInterval = MonsterCat.defaultFireRepeatDelay
     
-    required init(position: CGPoint) {
+    convenience required init(position: CGPoint) {
+        self.init(position: position, mainColor: NSColor.blackColor())
+    }
+    
+    init(position: CGPoint, mainColor: NSColor) {
+        self.mainColor = mainColor
+        
         self.sprite = SKSpriteNode(texture: SKTexture(imageNamed:"CatL"))
         self.speed = MonsterCat.defaultSpeed
         self.position = position
@@ -43,7 +51,7 @@ class MonsterCat: Enemy {
     
     func fire() -> Updatable {
         let position = CGPoint(x: self.position.x - 40.0, y: self.position.y)
-        return Tweet(position: position)
+        return Tweet(position: position, mainColor: mainColor)
     }
     
     func isReadyToFire() -> Bool {

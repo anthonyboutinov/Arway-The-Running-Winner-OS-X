@@ -34,8 +34,12 @@ class Tweet: Updatable, HoldsItsSprite {
         self.init(Tweets.getNext(), position: position, speed: Tweet.defaultSpeed)
     }
     
-    required init(_ content:TweetStruct, position: CGPoint, speed: CGFloat) {
-        self.sprite = Tweet.spriteForTweetContent(content)
+    convenience init(position: CGPoint, mainColor: NSColor) {
+        self.init(Tweets.getNext(), position: position, speed: Tweet.defaultSpeed, mainColor: mainColor)
+    }
+    
+    required init(_ content:TweetStruct, position: CGPoint, speed: CGFloat, mainColor: NSColor = NSColor.blackColor()) {
+        self.sprite = Tweet.spriteForTweetContent(content, mainColor: mainColor)
         self.speed = speed
         self.position = position
     }
@@ -45,11 +49,11 @@ class Tweet: Updatable, HoldsItsSprite {
         sprite.position.x -= speed * delta
     }
     
-    class func spriteForTweetContent(tweet: TweetStruct) -> SKSpriteNode {
+    class func spriteForTweetContent(tweet: TweetStruct, mainColor: NSColor = NSColor.blackColor()) -> SKSpriteNode {
         
         let textLabel = SKLabelNode(fontNamed: UIDesigner.gameFont)
         textLabel.fontSize = 15.0
-        textLabel.fontColor = NSColor.blackColor()
+        textLabel.fontColor = mainColor
         textLabel.text = tweet.text
         
         let authorLabel = SKLabelNode(fontNamed: UIDesigner.gameFont)
