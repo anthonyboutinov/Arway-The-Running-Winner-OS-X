@@ -362,7 +362,7 @@ class GameLevelScene: SKScene {
                 y: self.frame.height * random
             )
             // TODO: WORLDSTATE COLORS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            let mainColor = worldState.world > 2 ? NSColor.blackColor() : NSColor.whiteColor()
+            let mainColor = worldState.world < 3 ? NSColor.blackColor() : NSColor.whiteColor()
             let cat = MonsterCat(position: position, mainColor: mainColor)
             map.addChild(cat.sprite)
             updatables.append(cat)

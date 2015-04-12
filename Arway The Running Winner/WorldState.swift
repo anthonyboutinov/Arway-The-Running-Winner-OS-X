@@ -13,7 +13,7 @@ class WorldState: Printable {
     static let defaultNumberOfLives = 3
     static let coinsToLifeThreshold = 500
     static let levelsPerWorld = 2
-    static let totalNumberOfWorlds = 1
+    static let totalNumberOfWorlds = 3
     
     // MARK: - Variables
     
