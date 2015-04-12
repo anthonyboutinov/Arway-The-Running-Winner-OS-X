@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="100" height="20" tilewidth="35" tileheight="35" backgroundcolor="#83cacb">
+<map version="1.0" orientation="orthogonal" width="23" height="105" tilewidth="35" tileheight="35" backgroundcolor="#83cacb">
  <tileset firstgid="1" name="tiles_spritesheet" tilewidth="35" tileheight="35" spacing="1">
   <image source="tiles_spritesheet.png" width="457" height="468"/>
   <tile id="0">
@@ -68,39 +68,53 @@
    </properties>
   </tile>
  </tileset>
- <layer name="Background" width="100" height="20">
+ <tileset firstgid="158" name="city_spritesheet" tilewidth="35" tileheight="35">
+  <image source="city_spritesheet.png" width="490" height="245"/>
+ </tileset>
+ <tileset firstgid="256" name="our-tiles" tilewidth="35" tileheight="35">
+  <image source="our-tiles.png" width="175" height="175"/>
+  <tile id="2">
+   <properties>
+    <property name="contains" value="coin"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="281" name="amy" tilewidth="35" tileheight="35">
+  <image source="amy.png" width="35" height="70"/>
+ </tileset>
+ <layer name="Background" width="23" height="105">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3RMQ6AMAwDwDyoD+BHXfj/zMpQhiBLVOJOym7HVQAAAAAAAPDesbjz00T/ttrjfh0zG20Ls3q9Uj9I7DFCWXYyqtcr9YOnPS5HrLvhQB8AAA==
+   H4sIAAAAAAAAA+3OQQ0AMAgEsOMx/EtGA6+FpFXQBAAAAAAAAAAA4K5XSdfvxd4A0ocD9LwlAAA=
   </data>
  </layer>
- <layer name="BackgroundDecor" width="100" height="20">
+ <layer name="BackgroundDecor" width="23" height="105">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3OsQkAIAxFwUxhYZn9h7RxAFGSQu4gZfgvAgAAAAAAAOrlvq6t8fjf2Xsi465r1uTAlxZVYb/tQB8AAA==
+   H4sIAAAAAAAAA+3BMQEAAADCoPVPbQsvoAAAAAAAAAAAAHgb+usvK7wlAAA=
   </data>
  </layer>
- <layer name="Walls" width="100" height="20">
+ <layer name="Walls" width="23" height="105">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3UPQ6AIAyG4Q5MnsNjaeLoAbyMt3XRQeJPCwoi75M0Lo0l/QgiAAAAAAAAAHJoch/gB5z3DUUW8Zzs8wjNpMYsRmWfdqf+/qd1xlad4h+NfD+L9qCGRLOd6O75VV/su1WKt3Lx35u7TDQ9NRkNZe2PrdBzhsxIvYMzs6Gs/SWUdQ9P7aA/yWMBYTmo2UAfAAA=
+   H4sIAAAAAAAAA+2YawoDIQyEt2foFTxE73+ysj8EkRgnZpK12x0QKYVPN5qHOY5Hd9H75Wd8hHFyd2OXZi5OdulmRD27NMPKmrGZqmzP/hA2ww4SW5J3DcTeq2tYztK6xso9QdfIuIMrKsJgsCVWr1V7IzaX2JIf9XEPUdZZsmNKz2byR/E7gs3kj84ykl35mt952KP1otgWvrc+iWAjfK/P97GnXW/X3KCpBLGrXTy5YTSqrrZ3ls8z2Iw4u4u9I9irWonfRfntYVvEZEf5JbOOnXFZ7JGQd9pstrKjap+MtyuTHVl/s6XVyHeL37u906yKrjWj2U/ewZWZ57V7ZY0DV/RM0e9G2D2PIYu9GezofDm7a0j+2Ml3NO3s85KyY6znPa/dkfofe99RZ+l5N0j+EtFbR4T2Htlsr66Ig0w2O+e07FNZOQ19Q1rYI2X0ZmbxycPWWL1265kiXDb7H3ozmn6lrlrJE9H7Rnv8K+wvYKXg3bwlAAA=
   </data>
  </layer>
- <layer name="Hazards" width="100" height="20">
+ <layer name="Hazards" width="23" height="105">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3BAQEAAACAkP6v7ggKAAAAAAAAABhk6EtKQB8AAA==
+   H4sIAAAAAAAAA+3BMQEAAADCoPVPbQsvoAAAAAAAAAAAAHgb+usvK7wlAAA=
   </data>
  </layer>
- <layer name="CollidableItems" width="100" height="20">
+ <layer name="CollidableItems" width="23" height="105">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3UsQnAMAwEQK2R8TyGBsgA2dhpUtmpQpCKO1Cl4h8EigAAAAAAvjjuyeoS0NxVXaCB3Z/Il934Ke/hHj2c1QUAWEzdicijQB8AAA==
+   H4sIAAAAAAAAA+3YMREAAAgDsdrAv1E0MHAMJAp+7DWBmboOAACAh+xwAAAAALjlowM2NO/Lj/m8JQAA
   </data>
  </layer>
- <layer name="NoncollidableItems" width="100" height="20">
+ <layer name="NoncollidableItems" width="23" height="105">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3U0Q6AIAiFYd//HXjXbsthgg7R+r/NVRdgclalAAAAAIBOsl8AD+SxF/LwiZ4XedhJdY3cA++kcR+5z1fNnnHljHbIQ24rqv9onVZr6VfX9p49vU+XcUYxLq0OPp7v4295zP7rRmt7M47Io1V3eoZAlguVU+zUQB8AAA==
+   H4sIAAAAAAAAA+2ZSw6AIAxE0ftfgbsaFmwIYIj9TZ23cUeH6VibWApB5r68FeBRvQUExcKXLDXIO302SfVD4pw6PIks9NWX7n9799B3A2ZpD/3Rhx6Tv5Ah61p3QDv3K+PugL5LRCFqv0+xukcWv7ShT2TFmI2TrGTKlcRd0L+D1v2c1WOmfEDS2kDTq8HOA/RZRGJgvctn+Qe4qiFZ22sGos1eNL0aIHmApDUqD5kQaBu8JQAA
   </data>
  </layer>
- <layer name="Foreground" width="100" height="20">
+ <layer name="Foreground" width="23" height="105">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3PMQ0AAAgEsdeCf5EsWGCBNjkBlwAAAAAAAMCemr6o/HuGKxpfGpzqQB8AAA==
+   H4sIAAAAAAAAA+3MMQ0AMAwEsQRGC7T4Q6BjfrOlW6+KpNO59w283ycAAAAAAAAAAGDfAD7Zx6+8JQAA
   </data>
  </layer>
 </map>

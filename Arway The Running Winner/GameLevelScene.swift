@@ -127,6 +127,7 @@ class GameLevelScene: SKScene {
     
     override func keyDown(theEvent: NSEvent) {
         
+        
         switch theEvent.character {
         case NSUpArrowFunctionKey:
             player.mightAsWellJump = true
@@ -137,6 +138,11 @@ class GameLevelScene: SKScene {
         case NSRightArrowFunctionKey:
             player.forwardMarch = true
             return
+        case 61: // + (=)
+            gameOverState = .playerHasWon
+            gameIsOver = true
+            worldState.advanceToTheNextLevel()
+            replay()
         default:
             break
         }
@@ -187,6 +193,8 @@ class GameLevelScene: SKScene {
                     goToTheMainMenuScene()
                 default: break
                 }
+            } else if node == pauseButton {
+                gameIsPaused = true
             }
         }
     }
@@ -242,7 +250,11 @@ class GameLevelScene: SKScene {
         
         // Set rightmost position in pixels after crossing which player is
         // declared a winner.
-        winLine = (map.mapSize.width - 5) * map.tileSize.width
+        if worldState.world == WorldState.totalNumberOfWorlds {
+            winLine = (map.mapSize.height - 4) * map.tileSize.height
+        } else {
+            winLine = (map.mapSize.width - 5) * map.tileSize.width
+        }
         
         // Set background color from map's property
         self.backgroundColor = SKColor(hex: map.backgroundColor)
@@ -326,6 +338,7 @@ class GameLevelScene: SKScene {
         }
         
         // FIXME: Delete this line when ready to test on real device (LOW FPS)
+        // Currently evetyrhing got adapted the way that this line is required. =/
         delta *= 2.0
         
         previousUpdateTime = currentTime
@@ -357,11 +370,14 @@ class GameLevelScene: SKScene {
             lastEnemyTime = currentTime
             
             let random = 0.2 + CGFloat(Double(arc4random_uniform(6)) / 10.0)
-            let position = CGPoint(
+            var position = CGPoint(
                 x: player.sprite.position.x + self.frame.width * 0.7,
                 y: self.frame.height * random
             )
-            // TODO: WORLDSTATE COLORS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            if worldState.world == WorldState.totalNumberOfWorlds {
+                position.x += player.sprite.position.y
+            }
+            // TODO: WORLDSTATE COLORS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             let mainColor = worldState.world < 3 ? NSColor.blackColor() : NSColor.whiteColor()
             let cat = MonsterCat(position: position, mainColor: mainColor)
             map.addChild(cat.sprite)
@@ -740,7 +756,7 @@ class GameLevelScene: SKScene {
     }
     
     private func checkForWin() {
-        if player.position.x > winLine {
+        if (worldState.world == WorldState.totalNumberOfWorlds && player.position.y > winLine) || player.position.x > winLine {
             gameOverState = .playerHasWon
             gameIsOver = true
         }

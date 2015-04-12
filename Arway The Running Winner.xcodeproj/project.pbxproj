@@ -60,6 +60,9 @@
 		A8BA83E61ADAE85A006D3D93 /* World2Level2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = A8BA83E11ADAE85A006D3D93 /* World2Level2.tmx */; };
 		A8BA83E71ADAE85A006D3D93 /* World3Level1.tmx in Resources */ = {isa = PBXBuildFile; fileRef = A8BA83E21ADAE85A006D3D93 /* World3Level1.tmx */; };
 		A8BA83E81ADAE85A006D3D93 /* World3Level2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = A8BA83E31ADAE85A006D3D93 /* World3Level2.tmx */; };
+		A8BA83F21ADB1197006D3D93 /* World4Level1.tmx in Resources */ = {isa = PBXBuildFile; fileRef = A8BA83EF1ADB1197006D3D93 /* World4Level1.tmx */; };
+		A8BA83F51ADB11CE006D3D93 /* amy.png in Resources */ = {isa = PBXBuildFile; fileRef = A8BA83F31ADB11CE006D3D93 /* amy.png */; };
+		A8BA83F61ADB11CE006D3D93 /* amy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8BA83F41ADB11CE006D3D93 /* amy@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +136,9 @@
 		A8BA83E11ADAE85A006D3D93 /* World2Level2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = World2Level2.tmx; sourceTree = "<group>"; };
 		A8BA83E21ADAE85A006D3D93 /* World3Level1.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = World3Level1.tmx; sourceTree = "<group>"; };
 		A8BA83E31ADAE85A006D3D93 /* World3Level2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = World3Level2.tmx; sourceTree = "<group>"; };
+		A8BA83EF1ADB1197006D3D93 /* World4Level1.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = World4Level1.tmx; sourceTree = "<group>"; };
+		A8BA83F31ADB11CE006D3D93 /* amy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amy.png; sourceTree = "<group>"; };
+		A8BA83F41ADB11CE006D3D93 /* amy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "amy@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +289,8 @@
 		A84B59391AD987A600478227 /* Spritesheets */ = {
 			isa = PBXGroup;
 			children = (
+				A8BA83F31ADB11CE006D3D93 /* amy.png */,
+				A8BA83F41ADB11CE006D3D93 /* amy@2x.png */,
 				A83D4AAC1ADA938C0014A982 /* our-tiles.png */,
 				A83D4AAE1ADA938C0014A982 /* our-tiles@2x.png */,
 				A84B59271AD9879F00478227 /* city_spritesheet.png */,
@@ -304,6 +312,7 @@
 				A8BA83E11ADAE85A006D3D93 /* World2Level2.tmx */,
 				A8BA83E21ADAE85A006D3D93 /* World3Level1.tmx */,
 				A8BA83E31ADAE85A006D3D93 /* World3Level2.tmx */,
+				A8BA83EF1ADB1197006D3D93 /* World4Level1.tmx */,
 			);
 			name = Levels;
 			sourceTree = "<group>";
@@ -406,6 +415,7 @@
 			files = (
 				A84B59461AD987CF00478227 /* jump.wav in Resources */,
 				A84B59311AD9879F00478227 /* city_spritesheet@2x.png in Resources */,
+				A8BA83F61ADB11CE006D3D93 /* amy@2x.png in Resources */,
 				A8BA83E51ADAE85A006D3D93 /* World2Level1.tmx in Resources */,
 				A8BA83E71ADAE85A006D3D93 /* World3Level1.tmx in Resources */,
 				A84B59341AD9879F00478227 /* coin@2x.png in Resources */,
@@ -413,6 +423,7 @@
 				A84B58DE1AD9869500478227 /* MainMenu.xib in Resources */,
 				A84B591C1AD9871C00478227 /* Images.xcassets in Resources */,
 				A8BA83E81ADAE85A006D3D93 /* World3Level2.tmx in Resources */,
+				A8BA83F21ADB1197006D3D93 /* World4Level1.tmx in Resources */,
 				A84B59381AD9879F00478227 /* tiles_spritesheet.png in Resources */,
 				A84B59451AD987CF00478227 /* powerup.wav in Resources */,
 				A83D4ABF1ADAAB3A0014A982 /* Intro.m4v in Resources */,
@@ -428,6 +439,7 @@
 				A83D4AB91ADA98B50014A982 /* hiss1.wav in Resources */,
 				A84B59371AD9879F00478227 /* tiles_spritesheet@2x.png in Resources */,
 				A83D4AB71ADA98880014A982 /* hiss0.wav in Resources */,
+				A8BA83F51ADB11CE006D3D93 /* amy.png in Resources */,
 				A84B59301AD9879F00478227 /* city_spritesheet.png in Resources */,
 				A8BA83E41ADAE85A006D3D93 /* World1Level1.tmx in Resources */,
 			);

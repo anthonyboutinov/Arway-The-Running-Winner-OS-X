@@ -97,22 +97,22 @@
  </layer>
  <layer name="Walls" width="100" height="30">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3VQQqAIBCF4ZGoRcfxSt3/DiEFuUgiTH0N/wePdtMMo2UGAAAAAAAAAAC8iWcwnrddeJoF/UXzdycSb/Oo8HpeEvXZ5mC2hLoaqrP9SSykx3tayGuXnt4pzanUy50pXMnVnNE1HFHS639Qc8/zXdzt5It+1OqNVPr2P0VJbW9KM7EPtLa9CNpjH1p2/59FqOAuAAA=
+   H4sIAAAAAAAAA+3WQQ7CIBCF4UeMLjwOV/Iic3QXamQhaoXKg/xfMuluSvsGWgkAAAAAAAAAAKwm3wvjPbKIwevohbnyEZpvrrLWPJ9C82Uxg1/mJTRHFu574ZikU2rrEZojC2e5UluF3mfR4x7fKHvXrqtz+id0f+eH9KxSy4ye062c/Ot70LLPyyxeZdJjPW79Rqqd/Z/KSevanJ6JPLC3y4bC/sjDyxVkYVjB4C4AAA==
   </data>
  </layer>
  <layer name="Hazards" width="100" height="30">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3TgQkAQAgDMYXff2an0FdIJjgojQAAAAAAAAAAmJf5uwDo4t+3PHsBAIsUhgi6POAuAAA=
+   H4sIAAAAAAAAA+3UMQ0AAAjAMEjwr5lgAjhaBbsWAQAAAAAAAACwL/O6AIBRfgwAPNJeA7KR4C4AAA==
   </data>
  </layer>
  <layer name="CollidableItems" width="100" height="30">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3QwQkAIAwEwViG5VlGutcSfBmCM3D/5SIAAAAAgFt5tqojAABoY1QHdOKsJ2Z1AN/I6gAAAKCtDTEbcyLgLgAA
+   H4sIAAAAAAAAA+3QwQkAIAwEwViG5VmG3WsH8WUIzMD9l4sAAAAAAF7tu1UdAQBAG6M6oBNnfTGrAwAAACBxAFbh1YLgLgAA
   </data>
  </layer>
  <layer name="NoncollidableItems" width="100" height="30">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3VMQqAMBAEwNP/f+H+aiWIWCiiYcNMk1RhlxxJFQAAAAAAcNSjAxBvxhlK65SWd0apd9B1P3tqR77VF/uUWVmX92ekdIU/PPlTYKT9/T+vAACjbG7vim7gLgAA
+   H4sIAAAAAAAAA+3VUQqAIBAFwOr+V/Cu0UcggVBQ6ZMZkP1dXZ8uCwAAAAAAUCu9GyBaqdZMjv1sa+8u7ptxBmlSs/Ck57Rc8J/SqKN74z6PlovWLFJmQrbEf/ALzmF857t9rQAAvezZ5NC24C4AAA==
   </data>
  </layer>
  <layer name="Foreground" width="100" height="30">

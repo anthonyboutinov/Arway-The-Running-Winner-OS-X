@@ -11,9 +11,9 @@ import Foundation
 class WorldState: Printable {
     
     static let defaultNumberOfLives = 3
-    static let coinsToLifeThreshold = 500
+    static let coinsToLifeThreshold = 200
     static let levelsPerWorld = 2
-    static let totalNumberOfWorlds = 3
+    static let totalNumberOfWorlds = 4
     
     // MARK: - Variables
     
@@ -49,12 +49,15 @@ class WorldState: Printable {
             if level > WorldState.levelsPerWorld {
                 level = 1
                 world++
+            } else if level < 1 && world > 1 {
+                level = WorldState.levelsPerWorld
+                world--
             }
         }
     }
-    
-    var tmxFileName: String {
-        return "World\(world)Level\(level).tmx"
+
+var tmxFileName: String {
+    return "World\(world)Level\(level).tmx"
     }
     
     var backgroundImageFileName: String {
@@ -83,7 +86,7 @@ class WorldState: Printable {
     }
     
     func isTheEndOfTheGame() -> Bool {
-        return world > WorldState.totalNumberOfWorlds
+        return world == WorldState.totalNumberOfWorlds && level == WorldState.levelsPerWorld // last world last level is nonexistent, so the game ends here
     }
     
 }

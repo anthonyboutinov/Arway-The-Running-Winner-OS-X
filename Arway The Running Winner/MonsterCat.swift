@@ -12,7 +12,7 @@ class MonsterCat: Enemy {
     
     static let defaultSpeed = CGFloat(40.0)
     static let defaultFireDelay: CFTimeInterval = 2.0
-    static let defaultFireRepeatDelay: CFTimeInterval = 17.0
+    static let defaultFireRepeatDelay: CFTimeInterval = 400.0 // no repeat this way
     
     var firstFirePerformed = false
     
