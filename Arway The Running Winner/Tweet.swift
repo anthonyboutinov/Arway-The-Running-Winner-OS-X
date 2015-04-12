@@ -30,7 +30,7 @@ class Tweet: Updatable, HoldsItsSprite {
     var waitingToBeRemoved: Bool = false
     
     convenience required init(position: CGPoint) {
-//        let empty = TweetStruct("@unknownauthor", "[Relatively long censored text here]")
+//        let empty = TweetStruct("@unknownauthor", "[Quite short censored text here]")
         self.init(Tweets.getNext(), position: position, speed: Tweet.defaultSpeed)
     }
     
@@ -47,19 +47,22 @@ class Tweet: Updatable, HoldsItsSprite {
     
     class func spriteForTweetContent(tweet: TweetStruct) -> SKSpriteNode {
         
-        let authorLabel = SKLabelNode(fontNamed: UIDesigner.gameFont)
-        authorLabel.fontSize = 13.0
-        authorLabel.fontColor = NSColor.grayColor()
-        authorLabel.text = tweet.author
-        
         let textLabel = SKLabelNode(fontNamed: UIDesigner.gameFont)
         textLabel.fontSize = 15.0
         textLabel.fontColor = NSColor.blackColor()
         textLabel.text = tweet.text
         
+        let authorLabel = SKLabelNode(fontNamed: UIDesigner.gameFont)
+        authorLabel.fontSize = 13.0
+        authorLabel.fontColor = NSColor.grayColor()
+        authorLabel.text = tweet.author
+        authorLabel.position.y -= 17.0
+        authorLabel.position.x += textLabel.frame.width / 2.0 - authorLabel.frame.width / 2.0
+        
         let sprite = SKSpriteNode()
         sprite.addChild(authorLabel)
         sprite.addChild(textLabel)
+        sprite.anchorPoint = CGPoint(x: 1.0, y: 0.5)
         
 //        let sprite = SKSpriteNode(color: UIColor.whiteColor(), size: CGSizeMake(width: tweet.text / 140.0 * 30.0, height: 20.0))
         

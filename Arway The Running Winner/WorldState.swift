@@ -56,6 +56,10 @@ class WorldState: Printable {
         return "World\(world)Level\(level).tmx"
     }
     
+    var backgroundImageFileName: String {
+        return "World\(world)Level\(level)"
+    }
+    
     var gameOver = false
         
     // MARK: - Methods

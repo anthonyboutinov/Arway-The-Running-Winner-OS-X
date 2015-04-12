@@ -22,6 +22,30 @@ class Sound {
     static let powerupSound = SKAction.playSoundFileNamed("powerup.wav", waitForCompletion: false)
     //static let menuSound = SKAction.playSoundFileNamed("menu.wav", waitForCompletion: false)
     
+    static let hissSounds: [SKAction] = [
+        SKAction.playSoundFileNamed("hiss0.wav", waitForCompletion: false),
+        SKAction.playSoundFileNamed("hiss1.wav", waitForCompletion: false),
+        SKAction.playSoundFileNamed("hiss2.wav", waitForCompletion: false)
+    ]
+
+    private static var hissSoundI: Int = 0 {
+        didSet {
+            if hissSoundI > 2 {
+                hissSoundI = 0
+            }
+        }
+    }
+    
+    static var hissSound: SKAction {
+        get {
+            return hissSounds[hissSoundI++]
+        }
+    }
+    
+    
+    
+    
+    
     class func initSharedInstance() {
         (soundEffects, music) = UserDefaults.SFXAndMusic()
         
@@ -58,5 +82,7 @@ class Sound {
             
         }
     }
+    
+    
     
 }

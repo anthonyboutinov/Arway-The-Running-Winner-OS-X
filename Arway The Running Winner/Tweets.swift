@@ -39,7 +39,7 @@ class Tweets {
                             
                             if let author = dictionary["AUTHOR"] as? String {
                                 if let text = dictionary["CONTENT"] as? String {
-                                    tweets.append((author: author, text: text))
+                                    tweets.append((author: "@" + author, text: text))
                                 }
                             }
                         }
@@ -48,7 +48,7 @@ class Tweets {
                 }
             }
         }
-        NSException(name: "JSON data is empty", reason: "Tweets couldn't get data from the database: There was response from the database or the result of the query was empty", userInfo: nil).raise()
+        NSException(name: "JSON data is empty", reason: "Tweets couldn't get data from the database: There was no response from the database or the result of the query was empty", userInfo: nil).raise()
     }
     
 }

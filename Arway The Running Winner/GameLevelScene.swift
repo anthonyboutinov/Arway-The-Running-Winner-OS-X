@@ -246,6 +246,12 @@ class GameLevelScene: SKScene {
         
         // Set background color from map's property
         self.backgroundColor = SKColor(hex: map.backgroundColor)
+        
+        let backgroundImage = SKSpriteNode(imageNamed: worldState.backgroundImageFileName)
+        backgroundImage.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame))
+        backgroundImage.zPosition = -1000
+        addChild(backgroundImage)
+
     }
     
     private func initPlayer() {
@@ -388,8 +394,14 @@ class GameLevelScene: SKScene {
             // If the player starts to fall through the bottom of the map
             // then it's game over.
             if playerCoord.y >= map.mapSize.height - 1 {
+                
                 gameOverState = .playerHasLost
                 gameIsOver = true
+                
+                if Sound.soundEffects {
+                    runAction(Sound.hurtSound)
+                }
+                
                 return
             }
             let playerRect: CGRect = player.collisionBoundingBox
@@ -492,8 +504,14 @@ class GameLevelScene: SKScene {
         if gid != 0 {
             let tileRect = map.tileRect(fromTileCoord: tileCoord)
             if CGRectIntersectsRect(playerRect, tileRect) {
+                
                 gameOverState = .playerHasLost
                 gameIsOver = true
+                
+                if Sound.soundEffects {
+                    runAction(Sound.hurtSound)
+                }
+                
                 return true
             }
         }
@@ -524,12 +542,23 @@ class GameLevelScene: SKScene {
         let playerRect = player.collisionBoundingBox
         if CGRectIntersectsRect(playerRect, rect) {
             if player.hasPowerUpOn {
+                
                 spriteHolder.sprite.removeFromParent()
                 var s = (spriteHolder as! Updatable)
                 s.waitingToBeRemoved = true
+                
+                if Sound.soundEffects {
+                    runAction(Sound.hissSound)
+                }
+                
+                
             } else {
                 gameOverState = .playerHasLost
                 gameIsOver = true
+                
+                if Sound.soundEffects {
+                    runAction(Sound.hissSound)
+                }
             }
             return true
         }
@@ -672,9 +701,9 @@ class GameLevelScene: SKScene {
             worldState.advanceToTheNextLevel()
             
         case .playerHasLost:
-            if Sound.soundEffects {
-                runAction(Sound.hurtSound)
-            }
+//            if Sound.soundEffects {
+//                runAction(Sound.hurtSound)
+//            }
             // Next line: this means "if numLives == 1 before subtracting one."
             // This construction is required because numLives never reaches 0.
             // Instead, worldState is reset at that point.

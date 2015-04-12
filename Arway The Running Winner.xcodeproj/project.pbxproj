@@ -11,6 +11,11 @@
 		A83D4A9D1AD999390014A982 /* NSUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D4A9C1AD999390014A982 /* NSUtils.swift */; };
 		A83D4A9F1AD9C20E0014A982 /* DisplacementAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D4A9E1AD9C20D0014A982 /* DisplacementAble.swift */; };
 		A83D4AA61AD9E8110014A982 /* Tweets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D4AA51AD9E8110014A982 /* Tweets.swift */; };
+		A83D4AB01ADA938C0014A982 /* our-tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = A83D4AAC1ADA938C0014A982 /* our-tiles.png */; };
+		A83D4AB21ADA938C0014A982 /* our-tiles@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A83D4AAE1ADA938C0014A982 /* our-tiles@2x.png */; };
+		A83D4AB71ADA98880014A982 /* hiss0.wav in Resources */ = {isa = PBXBuildFile; fileRef = A83D4AB61ADA98880014A982 /* hiss0.wav */; };
+		A83D4AB91ADA98B50014A982 /* hiss1.wav in Resources */ = {isa = PBXBuildFile; fileRef = A83D4AB81ADA98B50014A982 /* hiss1.wav */; };
+		A83D4ABB1ADA98D00014A982 /* hiss2.wav in Resources */ = {isa = PBXBuildFile; fileRef = A83D4ABA1ADA98D00014A982 /* hiss2.wav */; };
 		A84B58D51AD9869500478227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B58D41AD9869500478227 /* AppDelegate.swift */; };
 		A84B58DE1AD9869500478227 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84B58DC1AD9869500478227 /* MainMenu.xib */; };
 		A84B58EA1AD9869500478227 /* Arway_The_Running_WinnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B58E91AD9869500478227 /* Arway_The_Running_WinnerTests.swift */; };
@@ -67,6 +72,11 @@
 		A83D4A9C1AD999390014A982 /* NSUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUtils.swift; sourceTree = "<group>"; };
 		A83D4A9E1AD9C20D0014A982 /* DisplacementAble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplacementAble.swift; sourceTree = "<group>"; };
 		A83D4AA51AD9E8110014A982 /* Tweets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweets.swift; sourceTree = "<group>"; };
+		A83D4AAC1ADA938C0014A982 /* our-tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "our-tiles.png"; sourceTree = "<group>"; };
+		A83D4AAE1ADA938C0014A982 /* our-tiles@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "our-tiles@2x.png"; sourceTree = "<group>"; };
+		A83D4AB61ADA98880014A982 /* hiss0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hiss0.wav; sourceTree = "<group>"; };
+		A83D4AB81ADA98B50014A982 /* hiss1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hiss1.wav; sourceTree = "<group>"; };
+		A83D4ABA1ADA98D00014A982 /* hiss2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hiss2.wav; sourceTree = "<group>"; };
 		A84B58CF1AD9869500478227 /* Arway The Running Winner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arway The Running Winner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A84B58D31AD9869500478227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A84B58D41AD9869500478227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -261,6 +271,8 @@
 		A84B59391AD987A600478227 /* Spritesheets */ = {
 			isa = PBXGroup;
 			children = (
+				A83D4AAC1ADA938C0014A982 /* our-tiles.png */,
+				A83D4AAE1ADA938C0014A982 /* our-tiles@2x.png */,
 				A84B59271AD9879F00478227 /* city_spritesheet.png */,
 				A84B59281AD9879F00478227 /* city_spritesheet@2x.png */,
 				A84B592B1AD9879F00478227 /* coin@2x.png */,
@@ -284,6 +296,9 @@
 		A84B594B1AD987D400478227 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				A83D4AB61ADA98880014A982 /* hiss0.wav */,
+				A83D4AB81ADA98B50014A982 /* hiss1.wav */,
+				A83D4ABA1ADA98D00014A982 /* hiss2.wav */,
 				A84B593F1AD987CF00478227 /* powerup.wav */,
 				A84B59401AD987CF00478227 /* jump.wav */,
 				A84B59411AD987CF00478227 /* menu.wav */,
@@ -386,10 +401,15 @@
 				A84B59481AD987CF00478227 /* coin.wav in Resources */,
 				A84B594A1AD987CF00478227 /* hurt.wav in Resources */,
 				A84B59471AD987CF00478227 /* menu.wav in Resources */,
+				A83D4ABB1ADA98D00014A982 /* hiss2.wav in Resources */,
+				A83D4AB21ADA938C0014A982 /* our-tiles@2x.png in Resources */,
+				A83D4AB01ADA938C0014A982 /* our-tiles.png in Resources */,
 				A84B59351AD9879F00478227 /* coin.png in Resources */,
 				A84B59491AD987CF00478227 /* 6dfcd1ecc4db.mp3 in Resources */,
+				A83D4AB91ADA98B50014A982 /* hiss1.wav in Resources */,
 				A84B59371AD9879F00478227 /* tiles_spritesheet@2x.png in Resources */,
 				A84B593C1AD987B600478227 /* World1Level2.tmx in Resources */,
+				A83D4AB71ADA98880014A982 /* hiss0.wav in Resources */,
 				A84B59301AD9879F00478227 /* city_spritesheet.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
