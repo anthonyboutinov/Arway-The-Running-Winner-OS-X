@@ -64,4 +64,12 @@ class UserDefaults {
         
     }
     
+    class func erase() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setInteger(0, forKey: "world")
+        defaults.setInteger(0, forKey: "level")
+        defaults.setInteger(0, forKey: "numCoins")
+        defaults.setInteger(0, forKey: "numLives")
+    }
+    
 }

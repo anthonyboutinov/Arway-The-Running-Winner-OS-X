@@ -13,6 +13,7 @@ class WorldState: Printable {
     static let defaultNumberOfLives = 3
     static let coinsToLifeThreshold = 500
     static let levelsPerWorld = 2
+    static let totalNumberOfWorlds = 1
     
     // MARK: - Variables
     
@@ -73,7 +74,16 @@ class WorldState: Printable {
     
     func advanceToTheNextLevel() {
         level++
-        UserDefaults.save(worldState: self)
+        
+        if isTheEndOfTheGame() {
+            UserDefaults.erase()
+        } else {
+            UserDefaults.save(worldState: self)
+        }
+    }
+    
+    func isTheEndOfTheGame() -> Bool {
+        return world > WorldState.totalNumberOfWorlds
     }
     
 }

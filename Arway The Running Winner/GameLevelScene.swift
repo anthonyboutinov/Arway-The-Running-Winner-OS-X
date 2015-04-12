@@ -251,10 +251,10 @@ class GameLevelScene: SKScene {
         
         // TODO: Этот код рабочий, раскомментировать, если надо включить картинки на заднем фоне
         
-//        let backgroundImage = SKSpriteNode(imageNamed: worldState.backgroundImageFileName)
-//        backgroundImage.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame))
-//        backgroundImage.zPosition = -1000
-//        addChild(backgroundImage)
+        let backgroundImage = SKSpriteNode(imageNamed: worldState.backgroundImageFileName)
+        backgroundImage.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame))
+        backgroundImage.zPosition = -1000
+        addChild(backgroundImage)
 
     }
     
@@ -601,6 +601,10 @@ class GameLevelScene: SKScene {
         // Tile is directly above the player
         let tile = layer.tileAtCoord(tileCoord)
         
+        if tile == nil {
+            return
+        }
+        
         if let properties = tile!.userData {
             // Optimized and personalized properties
             
@@ -721,7 +725,9 @@ class GameLevelScene: SKScene {
         
         // FIXME: gameOverLabel does not show up
         for node in [gameOverLabel, replayButton, mainMenuButtonNextToReplayButton] {
-            node.hidden = false
+            if !(worldState.isTheEndOfTheGame() && node == replayButton) {
+                node.hidden = false
+            }
         }
     }
     
