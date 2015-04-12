@@ -37,6 +37,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Init Sound
         Sound.initSharedInstance()
         
+        // Get data from the database
+//        tweets = JSONParser.getData("http://82.146.43.238")
+        Tweets.getData()
+        
         // Init Main Menu Scene
         let scene = MainMenuScene()
         
@@ -47,9 +51,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         skView.showsNodeCount = true
         
         presentScene(scene, skView)
+        
     }
     
     func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool {
         return true
     }
+    
+
 }

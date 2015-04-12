@@ -10,6 +10,8 @@
 		A83D4A6E1AD9909E0014A982 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A83D4A6D1AD9909E0014A982 /* libz.dylib */; };
 		A83D4A9D1AD999390014A982 /* NSUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D4A9C1AD999390014A982 /* NSUtils.swift */; };
 		A83D4A9F1AD9C20E0014A982 /* DisplacementAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D4A9E1AD9C20D0014A982 /* DisplacementAble.swift */; };
+		A83D4AA11AD9DD320014A982 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D4AA01AD9DD320014A982 /* JSONParser.swift */; };
+		A83D4AA61AD9E8110014A982 /* Tweets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D4AA51AD9E8110014A982 /* Tweets.swift */; };
 		A84B58D51AD9869500478227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B58D41AD9869500478227 /* AppDelegate.swift */; };
 		A84B58D71AD9869500478227 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B58D61AD9869500478227 /* GameScene.swift */; };
 		A84B58DE1AD9869500478227 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84B58DC1AD9869500478227 /* MainMenu.xib */; };
@@ -68,6 +70,8 @@
 		A83D4A6D1AD9909E0014A982 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		A83D4A9C1AD999390014A982 /* NSUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUtils.swift; sourceTree = "<group>"; };
 		A83D4A9E1AD9C20D0014A982 /* DisplacementAble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplacementAble.swift; sourceTree = "<group>"; };
+		A83D4AA01AD9DD320014A982 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		A83D4AA51AD9E8110014A982 /* Tweets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweets.swift; sourceTree = "<group>"; };
 		A84B58CF1AD9869500478227 /* Arway The Running Winner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arway The Running Winner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A84B58D31AD9869500478227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A84B58D41AD9869500478227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +142,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A83D4AA21AD9DD790014A982 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A83D4A9C1AD999390014A982 /* NSUtils.swift */,
+				A84B59131AD9871000478227 /* SKUtils.swift */,
+				A83D4AA01AD9DD320014A982 /* JSONParser.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		A84B58C61AD9869500478227 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				A84B58D41AD9869500478227 /* AppDelegate.swift */,
+				A83D4AA51AD9E8110014A982 /* Tweets.swift */,
 				A84B58FD1AD986D400478227 /* Scenes */,
 				A84B590C1AD9870000478227 /* Interactive Elements */,
 				A84B590D1AD9871000478227 /* WorldStateWithUI.swift */,
@@ -167,8 +182,7 @@
 				A84B590F1AD9871000478227 /* UIDesigner.swift */,
 				A84B59111AD9871000478227 /* Sound.swift */,
 				A84B59121AD9871000478227 /* UserDefaults.swift */,
-				A83D4A9C1AD999390014A982 /* NSUtils.swift */,
-				A84B59131AD9871000478227 /* SKUtils.swift */,
+				A83D4AA21AD9DD790014A982 /* Utils */,
 				A84B593E1AD987BA00478227 /* Levels */,
 				A84B594B1AD987D400478227 /* Sounds */,
 				A84B59391AD987A600478227 /* Spritesheets */,
@@ -405,9 +419,11 @@
 				A84B59161AD9871000478227 /* UIDesigner.swift in Sources */,
 				A84B59501AD98CA300478227 /* JSTileMap.m in Sources */,
 				A84B58FC1AD986CB00478227 /* SettingsScene.swift in Sources */,
+				A83D4AA61AD9E8110014A982 /* Tweets.swift in Sources */,
 				A84B59091AD986F300478227 /* Tweet.swift in Sources */,
 				A84B59151AD9871000478227 /* WorldState.swift in Sources */,
 				A84B58FA1AD986CB00478227 /* PlayScene.swift in Sources */,
+				A83D4AA11AD9DD320014A982 /* JSONParser.swift in Sources */,
 				A84B591A1AD9871000478227 /* SKUtils.swift in Sources */,
 				A84B590A1AD986F300478227 /* Player.swift in Sources */,
 				A83D4A9D1AD999390014A982 /* NSUtils.swift in Sources */,
