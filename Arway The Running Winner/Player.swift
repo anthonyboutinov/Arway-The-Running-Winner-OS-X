@@ -8,7 +8,8 @@
 
 import Foundation
 
-let timePerFrame = 0.5
+let defaultTimePerFrame = 0.35
+
 
 class Player: DisplacementAble, Updatable, HoldsItsSprite {
 
@@ -23,6 +24,10 @@ class Player: DisplacementAble, Updatable, HoldsItsSprite {
     static private let powerUpMovementMomentumMultiplier = CGFloat(2.25)
     
     static private let powerUpTime: NSTimeInterval = 15.0
+    
+    static private let speedyTimePerFrame = 0.2
+    
+    private var timePerFrame = defaultTimePerFrame
     
 //    static private let downForce = CGFloat(-2.8799999999999999)
     
@@ -196,6 +201,10 @@ class Player: DisplacementAble, Updatable, HoldsItsSprite {
     
     private func updateFrameAmination(delta: CFTimeInterval, var displacement: CGPoint) {
         
+        if powerUpTimeLeft <= 0.0 {
+            timePerFrame = defaultTimePerFrame
+        }
+        
         var updateAlternatingAmination = false
         
         currentFrameTime += delta as Double
@@ -295,6 +304,7 @@ class Player: DisplacementAble, Updatable, HoldsItsSprite {
             sprite.runAction(Sound.powerupSound)
         }
         powerUpTimeLeft = Player.powerUpTime
+        timePerFrame = Player.speedyTimePerFrame
     }
     
 }

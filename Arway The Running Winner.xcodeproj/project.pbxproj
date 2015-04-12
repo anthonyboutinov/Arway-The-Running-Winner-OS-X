@@ -16,6 +16,8 @@
 		A83D4AB71ADA98880014A982 /* hiss0.wav in Resources */ = {isa = PBXBuildFile; fileRef = A83D4AB61ADA98880014A982 /* hiss0.wav */; };
 		A83D4AB91ADA98B50014A982 /* hiss1.wav in Resources */ = {isa = PBXBuildFile; fileRef = A83D4AB81ADA98B50014A982 /* hiss1.wav */; };
 		A83D4ABB1ADA98D00014A982 /* hiss2.wav in Resources */ = {isa = PBXBuildFile; fileRef = A83D4ABA1ADA98D00014A982 /* hiss2.wav */; };
+		A83D4ABD1ADA9F1F0014A982 /* IntroScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D4ABC1ADA9F1F0014A982 /* IntroScene.swift */; };
+		A83D4ABF1ADAAB3A0014A982 /* Intro.m4v in Resources */ = {isa = PBXBuildFile; fileRef = A83D4ABE1ADAAB3A0014A982 /* Intro.m4v */; };
 		A84B58D51AD9869500478227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B58D41AD9869500478227 /* AppDelegate.swift */; };
 		A84B58DE1AD9869500478227 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84B58DC1AD9869500478227 /* MainMenu.xib */; };
 		A84B58EA1AD9869500478227 /* Arway_The_Running_WinnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B58E91AD9869500478227 /* Arway_The_Running_WinnerTests.swift */; };
@@ -77,6 +79,8 @@
 		A83D4AB61ADA98880014A982 /* hiss0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hiss0.wav; sourceTree = "<group>"; };
 		A83D4AB81ADA98B50014A982 /* hiss1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hiss1.wav; sourceTree = "<group>"; };
 		A83D4ABA1ADA98D00014A982 /* hiss2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hiss2.wav; sourceTree = "<group>"; };
+		A83D4ABC1ADA9F1F0014A982 /* IntroScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroScene.swift; sourceTree = "<group>"; };
+		A83D4ABE1ADAAB3A0014A982 /* Intro.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Intro.m4v; sourceTree = "<group>"; };
 		A84B58CF1AD9869500478227 /* Arway The Running Winner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arway The Running Winner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A84B58D31AD9869500478227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A84B58D41AD9869500478227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +194,7 @@
 				A84B590F1AD9871000478227 /* UIDesigner.swift */,
 				A84B59111AD9871000478227 /* Sound.swift */,
 				A84B59121AD9871000478227 /* UserDefaults.swift */,
+				A83D4ABE1ADAAB3A0014A982 /* Intro.m4v */,
 				A83D4AA81ADA79BC0014A982 /* Fonts */,
 				A83D4AA21AD9DD790014A982 /* Utils */,
 				A84B593E1AD987BA00478227 /* Levels */,
@@ -236,6 +241,7 @@
 				A84B58F31AD986CB00478227 /* GameLevelScene.swift */,
 				A84B58F41AD986CB00478227 /* MainMenuScene.swift */,
 				A84B58F51AD986CB00478227 /* PlayScene.swift */,
+				A83D4ABC1ADA9F1F0014A982 /* IntroScene.swift */,
 				A84B58F61AD986CB00478227 /* AboutScene.swift */,
 				A84B58F71AD986CB00478227 /* SettingsScene.swift */,
 			);
@@ -398,6 +404,7 @@
 				A84B59381AD9879F00478227 /* tiles_spritesheet.png in Resources */,
 				A84B593D1AD987B600478227 /* World1Level1.tmx in Resources */,
 				A84B59451AD987CF00478227 /* powerup.wav in Resources */,
+				A83D4ABF1ADAAB3A0014A982 /* Intro.m4v in Resources */,
 				A84B59481AD987CF00478227 /* coin.wav in Resources */,
 				A84B594A1AD987CF00478227 /* hurt.wav in Resources */,
 				A84B59471AD987CF00478227 /* menu.wav in Resources */,
@@ -433,6 +440,7 @@
 				A84B59501AD98CA300478227 /* JSTileMap.m in Sources */,
 				A84B58FC1AD986CB00478227 /* SettingsScene.swift in Sources */,
 				A83D4AA61AD9E8110014A982 /* Tweets.swift in Sources */,
+				A83D4ABD1ADA9F1F0014A982 /* IntroScene.swift in Sources */,
 				A84B59091AD986F300478227 /* Tweet.swift in Sources */,
 				A84B59151AD9871000478227 /* WorldState.swift in Sources */,
 				A84B58FA1AD986CB00478227 /* PlayScene.swift in Sources */,

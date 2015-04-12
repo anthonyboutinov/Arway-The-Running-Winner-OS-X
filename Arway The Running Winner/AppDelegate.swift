@@ -30,8 +30,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         /* Sprite Kit applies additional optimizations to improve rendering performance */
         skView.ignoresSiblingOrder = true
         
-        skView.showsFPS = true
-        skView.showsNodeCount = true
+//        skView.showsFPS = true
+//        skView.showsNodeCount = true
         
         presentScene(scene, skView)
         

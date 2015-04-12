@@ -8,11 +8,15 @@
 
 import Foundation
 
-func presentScene(scene: SKScene, view: SKView) {
+func presentScene(scene: SKScene, view: SKView, transition: SKTransition? = nil) {
     scene.anchorPoint = CGPoint(x: 0.0, y: 0.0)
     scene.scaleMode = .ResizeFill
     scene.size = view.bounds.size
-    view.presentScene(scene)
+    if let transition = transition {
+        view.presentScene(scene, transition: transition)
+    } else {
+        view.presentScene(scene)
+    }
 }
 
 // Extends CGPoint manipulations

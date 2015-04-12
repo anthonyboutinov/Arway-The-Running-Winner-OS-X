@@ -51,9 +51,7 @@ class PlayScene: SKScene {
     }
     
     func playNewGame() {
-        let scene = GameLevelScene()
-        scene.worldState = WorldStateWithUI()
-        presentScene(scene, view!)
+        presentScene(IntroScene(), view!)
     }
     
     func continueGame() {
