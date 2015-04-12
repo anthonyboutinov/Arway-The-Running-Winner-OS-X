@@ -24,6 +24,9 @@ class MainMenuScene: SKScene {
         let elements: [SKSpriteNode] = [playButton, settingsButton, aboutButton]
         let texts: [String] = ["Play", "Settings", "About"]
         UIDesigner.layoutButtonsWithText(scene: self, buttons: elements, texts: texts, zPosition: 2.0)
+        UIDesigner.setBackground(self, isMainMenu: true)
+        
+        UIDesigner.addTitleAsImage("Logo", self, yOffset: 30.0)
     }
     
     override func mouseDown(theEvent: NSEvent) {

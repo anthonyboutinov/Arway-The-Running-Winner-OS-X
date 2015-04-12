@@ -20,6 +20,7 @@ class AboutScene: SKScene {
     // MARK: SKScene override methods
     
     override func didMoveToView(view: SKView) {
+        UIDesigner.setBackground(self)
         backButton = UIDesigner.addBackButton(self)
         let title = UIDesigner.addTitle("About", self)
 

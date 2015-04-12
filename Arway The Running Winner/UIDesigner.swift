@@ -10,6 +10,9 @@ import Foundation
 
 class UIDesigner {
     
+//    static let primaryColor = NSColor(hex: 0x2d57a1)
+    static let primaryColor = NSColor(hexAsString: "#2d57a1")
+    
     static let gameFont = "Helvetica-Nueue-Thin"
     
     static let blueButtonTexture = SKTexture(imageNamed: "blue_button")
@@ -24,8 +27,17 @@ class UIDesigner {
         return SKSpriteNode(texture: UIDesigner.blueButtonTexture)
     }
     
-    class func label() -> SKLabelNode {
-        return SKLabelNode(fontNamed: gameFont)
+    class func label(font: String = gameFont) -> SKLabelNode {
+        return SKLabelNode(fontNamed: font)
+    }
+    
+    class func setBackground(scene: SKScene, isMainMenu: Bool = false) {
+//        scene.backgroundColor = primaryColor
+        let name = isMainMenu ? "BackgroundMainMenu" : "Background"
+        let bg = SKSpriteNode(imageNamed: name)
+        bg.zPosition = -1000
+        bg.position = CGPoint(x: CGRectGetMidX(scene.frame), y: CGRectGetMidY(scene.frame))
+        scene.addChild(bg)
     }
     
     class func insertTextIntoButton(button: SKSpriteNode, _ text: String) -> SKLabelNode {
@@ -129,11 +141,18 @@ class UIDesigner {
         }
     }
     
-    class func addTitle(text: String, _ scene: SKScene) -> SKLabelNode {
-        let title = SKLabelNode(fontNamed: gameFont)
-        title.fontSize = 42
+    class func addTitle(text: String, _ scene: SKScene, font: String = gameFont, fontSize: Int = 42, yOffset: CGFloat = CGFloat(0.0)) -> SKLabelNode {
+        let title = SKLabelNode(fontNamed: font)
+        title.fontSize = CGFloat(fontSize)
         title.text = text
-        title.position = CGPoint(x: CGRectGetMidX(scene.frame), y: CGRectGetMaxY(scene.frame) - margin - title.frame.height)
+        title.position = CGPoint(x: CGRectGetMidX(scene.frame), y: CGRectGetMaxY(scene.frame) - margin - title.frame.height + yOffset)
+        scene.addChild(title)
+        return title
+    }
+    
+    class func addTitleAsImage(imageNamed: String, _ scene: SKScene, yOffset: CGFloat = CGFloat(0.0)) -> SKSpriteNode {
+        let title = SKSpriteNode(imageNamed: imageNamed)
+        title.position = CGPoint(x: CGRectGetMidX(scene.frame), y: CGRectGetMaxY(scene.frame) - margin - title.frame.height + yOffset)
         scene.addChild(title)
         return title
     }

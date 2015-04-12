@@ -30,6 +30,8 @@ class PlayScene: SKScene {
             let texts: [String] = ["New Game", "Continue"]
             UIDesigner.layoutButtonsWithText(scene: self, buttons: elements, texts: texts, zPosition: 2.0)
             
+            UIDesigner.setBackground(self)
+            
         } else {
             playNewGame()
         }

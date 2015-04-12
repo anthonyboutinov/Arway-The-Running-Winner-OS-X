@@ -25,10 +25,11 @@ class Tweets {
     
     class func getData() {
         
-        var endpoint = NSURL(string: "http://82.146.43.238")
+        let endpoint = NSURL(string: "http://82.146.43.238")!
         
-        for try in 0...5 {
-            if let data = NSData(contentsOfURL: endpoint!) {
+        // несколько попыток
+        for try in 0...6 {
+            if let data = NSData(contentsOfURL: endpoint) {
                 
                 if let json: NSArray = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSArray {
                     for item in json {
@@ -43,10 +44,11 @@ class Tweets {
                             }
                         }
                     }
+                    return
                 }
-                return
             }
         }
+        NSException(name: "JSON data is empty", reason: "Tweets couldn't get data from the database: There was response from the database or the result of the query was empty", userInfo: nil).raise()
     }
     
 }

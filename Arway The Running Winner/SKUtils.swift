@@ -75,4 +75,12 @@ extension NSColor {
         self.init(red:(hex >> 16) & 0xff, green:(hex >> 8) & 0xff, blue:hex & 0xff)
     }
     
+    convenience init(hexAsString: String) {
+        var bgresult: UInt32 = 0
+        let scanner = NSScanner(string: hexAsString)
+        scanner.scanLocation = 1 // bypass '#' character
+        scanner.scanHexInt(&bgresult)
+        self.init(hex: bgresult)
+    }
+    
 }
