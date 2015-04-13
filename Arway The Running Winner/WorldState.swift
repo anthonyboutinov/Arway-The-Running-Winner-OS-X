@@ -10,7 +10,7 @@ import Foundation
 
 class WorldState: Printable {
     
-    static let defaultNumberOfLives = 3
+    static let defaultNumberOfLives = 4
     static let coinsToLifeThreshold = 200
     static let levelsPerWorld = 2
     static let totalNumberOfWorlds = 4

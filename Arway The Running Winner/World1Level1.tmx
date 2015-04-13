@@ -87,12 +87,12 @@
  </tileset>
  <layer name="Background" width="100" height="30">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3OMQkAAAgAQesYw/6lNIKbIHfw+0cAAAAAAAAAAACwlVNdTwAAPNVqQ2n74C4AAA==
+   H4sIAAAAAAAAA+3RuQ0AIAwDQLrMwhjsvxTUCEo+cSdZaa04JQAAAAAAAAAAWC8mF16TW8rpEgCfiy7cxz57jX796gYVJDVZqeAuAAA=
   </data>
  </layer>
  <layer name="BackgroundDecor" width="100" height="30">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAAAA4G+ekqdq4C4AAA==
+   H4sIAAAAAAAAA+3RMQ0AAAjAMDzgHb1o4CAhpH0mYBEAAAAAAAAAAAAAcFsOy64all2ffjTvQNhu4C4AAA==
   </data>
  </layer>
  <layer name="Walls" width="100" height="30">

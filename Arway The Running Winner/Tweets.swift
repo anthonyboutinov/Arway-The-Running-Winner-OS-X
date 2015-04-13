@@ -23,7 +23,7 @@ class Tweets {
         return result
     }
     
-    class func getData() {
+    class func getData() -> Bool {
         
         let endpoint = NSURL(string: "http://82.146.43.238")!
         
@@ -44,11 +44,11 @@ class Tweets {
                             }
                         }
                     }
-                    return
+                    return true
                 }
             }
         }
-        NSException(name: "JSON data is empty", reason: "Tweets couldn't get data from the database: There was no response from the database or the result of the query was empty", userInfo: nil).raise()
+        return false
     }
     
 }

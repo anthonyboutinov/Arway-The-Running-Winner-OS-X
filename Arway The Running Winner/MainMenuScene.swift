@@ -18,6 +18,10 @@ class MainMenuScene: SKScene {
     private let settingsButton = UIDesigner.button()
     private let aboutButton = UIDesigner.button()
     
+    private let erorrMessageLablel = UIDesigner.label()
+    
+    var tweetsDidLoad = false
+    
     // MARK: SKScene override methods
     
     override func didMoveToView(view: SKView) {
@@ -27,6 +31,7 @@ class MainMenuScene: SKScene {
         UIDesigner.setBackground(self, isMainMenu: true)
         
         UIDesigner.addTitleAsImage("Logo", self, yOffset: 30.0)
+        
     }
     
     override func mouseDown(theEvent: NSEvent) {

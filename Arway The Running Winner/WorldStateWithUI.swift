@@ -110,9 +110,8 @@ class WorldStateWithUI: WorldState {
     }
     
     func removeChildrenFromOldScene() {
-        let nodes = [uiCoinsText, uiCoinsImage, uiWorldLevelLabel]
+        let nodes = [uiCoinsText, uiCoinsImage, uiWorldLevelLabel, uiLivesLabel] + (uiLivesImages as [SKNode])
         uiWorldLevelLabel.parent!.removeChildrenInArray(nodes)
-        // TODO: Maybe here I should set self.scene = nil ?
     }
     
     func addChildrenToScene() {

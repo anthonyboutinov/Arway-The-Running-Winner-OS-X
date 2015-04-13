@@ -141,9 +141,14 @@ class GameLevelScene: SKScene {
         case 61: // + (=)
             gameOverState = .playerHasWon
             gameIsOver = true
-            worldState.advanceToTheNextLevel()
-            replay()
+            if worldState.isTheEndOfTheGame() {
+            } else {
+                replay()
+            }
+//        case 108: // l (L key)
+//            worldState.numLives++
         default:
+            println(theEvent.character)
             break
         }
         super.keyDown(theEvent)

@@ -21,11 +21,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Init Sound
         Sound.initSharedInstance()
         
-        // Get data from the database
-        Tweets.getData()
-        
         // Init Main Menu Scene
         let scene = MainMenuScene()
+        
+        // Get data from the database
+        scene.tweetsDidLoad = Tweets.getData()
         
         /* Sprite Kit applies additional optimizations to improve rendering performance */
         skView.ignoresSiblingOrder = true
