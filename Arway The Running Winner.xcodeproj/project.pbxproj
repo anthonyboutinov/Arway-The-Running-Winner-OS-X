@@ -55,6 +55,7 @@
 		A84B594A1AD987CF00478227 /* hurt.wav in Resources */ = {isa = PBXBuildFile; fileRef = A84B59441AD987CF00478227 /* hurt.wav */; };
 		A84B59501AD98CA300478227 /* JSTileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A84B594D1AD98CA300478227 /* JSTileMap.m */; };
 		A84B59511AD98CA300478227 /* LFCGzipUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A84B594F1AD98CA300478227 /* LFCGzipUtility.m */; };
+		A85B26111ADB7085002D0AC7 /* World1Level2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = A85B26101ADB7085002D0AC7 /* World1Level2.tmx */; };
 		A8BA83E41ADAE85A006D3D93 /* World1Level1.tmx in Resources */ = {isa = PBXBuildFile; fileRef = A8BA83DF1ADAE85A006D3D93 /* World1Level1.tmx */; };
 		A8BA83E51ADAE85A006D3D93 /* World2Level1.tmx in Resources */ = {isa = PBXBuildFile; fileRef = A8BA83E01ADAE85A006D3D93 /* World2Level1.tmx */; };
 		A8BA83E61ADAE85A006D3D93 /* World2Level2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = A8BA83E11ADAE85A006D3D93 /* World2Level2.tmx */; };
@@ -131,6 +132,7 @@
 		A84B594D1AD98CA300478227 /* JSTileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTileMap.m; sourceTree = "<group>"; };
 		A84B594E1AD98CA300478227 /* LFCGzipUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFCGzipUtility.h; sourceTree = "<group>"; };
 		A84B594F1AD98CA300478227 /* LFCGzipUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFCGzipUtility.m; sourceTree = "<group>"; };
+		A85B26101ADB7085002D0AC7 /* World1Level2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = World1Level2.tmx; sourceTree = "<group>"; };
 		A8BA83DF1ADAE85A006D3D93 /* World1Level1.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = World1Level1.tmx; sourceTree = "<group>"; };
 		A8BA83E01ADAE85A006D3D93 /* World2Level1.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = World2Level1.tmx; sourceTree = "<group>"; };
 		A8BA83E11ADAE85A006D3D93 /* World2Level2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = World2Level2.tmx; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				A8BA83DF1ADAE85A006D3D93 /* World1Level1.tmx */,
+				A85B26101ADB7085002D0AC7 /* World1Level2.tmx */,
 				A8BA83E01ADAE85A006D3D93 /* World2Level1.tmx */,
 				A8BA83E11ADAE85A006D3D93 /* World2Level2.tmx */,
 				A8BA83E21ADAE85A006D3D93 /* World3Level1.tmx */,
@@ -417,6 +420,7 @@
 				A84B59311AD9879F00478227 /* city_spritesheet@2x.png in Resources */,
 				A8BA83F61ADB11CE006D3D93 /* amy@2x.png in Resources */,
 				A8BA83E51ADAE85A006D3D93 /* World2Level1.tmx in Resources */,
+				A85B26111ADB7085002D0AC7 /* World1Level2.tmx in Resources */,
 				A8BA83E71ADAE85A006D3D93 /* World3Level1.tmx in Resources */,
 				A84B59341AD9879F00478227 /* coin@2x.png in Resources */,
 				A84B59361AD9879F00478227 /* bush.png in Resources */,
