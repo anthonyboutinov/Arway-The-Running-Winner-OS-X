@@ -167,15 +167,9 @@
 			children = (
 				A83D4A9C1AD999390014A982 /* NSUtils.swift */,
 				A84B59131AD9871000478227 /* SKUtils.swift */,
+				A84B59261AD9873900478227 /* JSTileMap */,
 			);
 			name = Utils;
-			sourceTree = "<group>";
-		};
-		A83D4AA81ADA79BC0014A982 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Fonts;
 			sourceTree = "<group>";
 		};
 		A84B58C61AD9869500478227 = {
@@ -208,14 +202,12 @@
 				A84B590F1AD9871000478227 /* UIDesigner.swift */,
 				A84B59111AD9871000478227 /* Sound.swift */,
 				A84B59121AD9871000478227 /* UserDefaults.swift */,
-				A83D4ABE1ADAAB3A0014A982 /* Intro.m4v */,
-				A83D4AA81ADA79BC0014A982 /* Fonts */,
 				A83D4AA21AD9DD790014A982 /* Utils */,
+				A83D4ABE1ADAAB3A0014A982 /* Intro.m4v */,
 				A84B593E1AD987BA00478227 /* Levels */,
 				A84B594B1AD987D400478227 /* Sounds */,
 				A84B59391AD987A600478227 /* Spritesheets */,
 				A84B591B1AD9871C00478227 /* Images.xcassets */,
-				A84B59261AD9873900478227 /* JSTileMap */,
 				A84B591D1AD9873000478227 /* Arway The Running Winner-Bridging-Header.h */,
 				A84B58D21AD9869500478227 /* Supporting Files */,
 			);

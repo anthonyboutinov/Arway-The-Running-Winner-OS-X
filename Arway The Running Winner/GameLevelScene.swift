@@ -264,10 +264,6 @@ class GameLevelScene: SKScene {
         // Set background color from map's property
         self.backgroundColor = SKColor(hex: map.backgroundColor)
         
-        
-        
-        // TODO: Этот код рабочий, раскомментировать, если надо включить картинки на заднем фоне
-        
         let backgroundImage = SKSpriteNode(imageNamed: worldState.backgroundImageFileName)
         backgroundImage.position = CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame))
         backgroundImage.zPosition = -1000

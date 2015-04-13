@@ -10,6 +10,10 @@ import Foundation
 
 class Tweets {
     
+    static var didLoad: Bool {
+        return tweets.count > 0
+    }
+    
     static var tweets: [TweetStruct] = [TweetStruct]()
     static private var index = 0
     
@@ -23,7 +27,7 @@ class Tweets {
         return result
     }
     
-    class func getData() -> Bool {
+    class func getData() {
         
         let endpoint = NSURL(string: "http://82.146.43.238")!
         
@@ -44,11 +48,10 @@ class Tweets {
                             }
                         }
                     }
-                    return true
+                    return
                 }
             }
         }
-        return false
     }
     
 }

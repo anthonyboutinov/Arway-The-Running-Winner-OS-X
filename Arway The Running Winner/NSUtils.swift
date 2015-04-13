@@ -10,7 +10,7 @@ import Foundation
 
 extension NSEvent {
     var character: Int {
-        let s1  =   self.charactersIgnoringModifiers!.unicodeScalars
+        let s1 = self.charactersIgnoringModifiers!.unicodeScalars
         return Int(s1[s1.startIndex].value)
     }
 }
