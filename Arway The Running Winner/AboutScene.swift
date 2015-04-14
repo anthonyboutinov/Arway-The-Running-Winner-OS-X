@@ -34,7 +34,6 @@ class AboutScene: SKScene {
             "Design", "Alevtina Petrova",
             "Twitter-component", "Alexandra Kuzmina",
             "Level Design", "Alina Ganieva",
-            "Tests", "Vladimir Burdin",
             "Website", "Alyona Moiseeva",
             "Special thanks to", "Kamil Khadiev",
             "", "Regina Kamaleeva",

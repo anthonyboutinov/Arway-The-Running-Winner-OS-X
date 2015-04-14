@@ -36,6 +36,7 @@ class WorldState: Printable {
                 level = 1
                 numLives = WorldState.defaultNumberOfLives
                 numCoins = 0
+                UserDefaults.erase()
             }
         }
     }
