@@ -50,6 +50,17 @@ class PlayScene: SKScene {
         }
     }
     
+    override func keyDown(theEvent: NSEvent) {
+        switch theEvent.character {
+        case NSEnterFunctionKey:
+            playNewGame()
+        case NSBackspaceFunctionKey:
+            presentScene(MainMenuScene(), view!)
+        default:
+            break
+        }
+    }
+    
     func playNewGame() {
         presentScene(IntroScene(), view!)
     }

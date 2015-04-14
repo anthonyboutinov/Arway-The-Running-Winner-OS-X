@@ -34,6 +34,15 @@ class IntroScene: SKScene {
         playNewGame()
     }
     
+    override func keyDown(theEvent: NSEvent) {
+        let char = theEvent.character
+        if char == NSEnterFunctionKey || char == NSSpacebarKey {
+            playNewGame()
+        } else if char == NSBackspaceFunctionKey {
+            presentScene(MainMenuScene(), view!)
+        }
+    }
+    
     override func update(currentTime: NSTimeInterval) {
         
         var delta = currentTime - previousUpdateTime

@@ -65,6 +65,9 @@ class GameLevelScene: SKScene {
     override func keyDown(theEvent: NSEvent) {
         
         switch theEvent.character {
+        case NSSpacebarKey:
+            physics.player.mightAsWellJump = true
+            return
         case NSUpArrowFunctionKey:
             physics.player.mightAsWellJump = true
             return
@@ -74,15 +77,31 @@ class GameLevelScene: SKScene {
         case NSRightArrowFunctionKey:
             physics.player.forwardMarch = true
             return
-        case 61: // + (=)
+        case NSEqualsOrPlusKey:
             physics.gameOverState = .playerHasWon
             physics.gameIsOver = true
             if physics.worldState.isTheEndOfTheGame() {
             } else {
                 replay()
             }
+        case NSEnterFunctionKey:
+            if gameIsPaused {
+                gameIsPaused = false
+            } else if physics.gameIsOver {
+                if physics.worldState.isTheEndOfTheGame() {
+                    goToTheMainMenuScene()
+                } else {
+                    replay()
+                }
+            } else {
+                gameIsPaused = true
+            }
+        case NSBackspaceFunctionKey:
+            if gameIsPaused || physics.gameIsOver {
+                goToTheMainMenuScene()
+            }
         default:
-            println(theEvent.character)
+//            println(theEvent.character)
             break
         }
         super.keyDown(theEvent)

@@ -10,7 +10,12 @@ import Foundation
 
 extension NSEvent {
     var character: Int {
-        let s1 = self.charactersIgnoringModifiers!.unicodeScalars
-        return Int(s1[s1.startIndex].value)
+        let s = self.charactersIgnoringModifiers!.unicodeScalars
+        return Int(s[s.startIndex].value)
     }
 }
+
+let NSSpacebarKey = 32
+let NSEqualsOrPlusKey = 61
+let NSEnterFunctionKey = 13
+let NSBackspaceFunctionKey = 127

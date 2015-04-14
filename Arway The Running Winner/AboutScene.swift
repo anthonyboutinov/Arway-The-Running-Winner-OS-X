@@ -61,4 +61,13 @@ class AboutScene: SKScene {
         }
     }
     
+    override func keyDown(theEvent: NSEvent) {
+        let char = theEvent.character
+        if char == NSEnterFunctionKey || char == NSSpacebarKey || char == NSBackspaceFunctionKey {
+            presentScene(MainMenuScene(), view!)
+        }
+    }
+    
+    
+    
 }

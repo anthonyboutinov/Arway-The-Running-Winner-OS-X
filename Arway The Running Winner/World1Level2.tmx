@@ -86,7 +86,7 @@
  </tileset>
  <layer name="Background" width="110" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3TwQnAIBBEUXtIA1u1FSQNJGWliXgMEgi6ojvwHwziwdPHlBDdXnZUQ3x000Q3TWfZVQ3x8d800U0T3TTRTRPdNNFNE9000U0T3TTRLa775z6ymznfo82IbvYa5urtZh9Du815Yo3sPLGGp9sDsWnL4mAiAAA=
+   H4sIAAAAAAAAA+3TsQ3AIAwFUXZg90wACyRjsQTUNClc2Cfdk74s6hOtqbpxNq+pPrsx2Y3pPfuuqT7/G5PdmOzGZDcmuzHZjcluTHZjshuT3epaP2+7cdmNzW65evAqxxO8yhHptgEs0WtSYCIAAA==
   </data>
  </layer>
  <layer name="BackgroundDecor" width="110" height="20">

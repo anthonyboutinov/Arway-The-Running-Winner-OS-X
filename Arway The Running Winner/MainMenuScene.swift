@@ -70,11 +70,7 @@ class MainMenuScene: SKScene {
         for node in self.nodesAtPoint(location) as! [SKNode] {
             switch node {
             case playButton:
-                if Tweets.didLoad {
-                    goToPlayScreen()
-                } else {
-                    tryToLoadTweetsAgainAndGoToPlayScreenOnSuccess()
-                }
+                play()
             case settingsButton:
                 goToSettings()
             case aboutButton:
@@ -82,6 +78,15 @@ class MainMenuScene: SKScene {
             default:
                 break
             }
+        }
+    }
+    
+    override func keyDown(theEvent: NSEvent) {
+        switch theEvent.character {
+        case NSEnterFunctionKey:
+            play()
+        default:
+            break
         }
     }
     
@@ -113,5 +118,13 @@ class MainMenuScene: SKScene {
 //            self.runAction(menuSound)
 //        }
         presentScene(AboutScene(), view!)
+    }
+    
+    private func play() {
+        if Tweets.didLoad {
+            goToPlayScreen()
+        } else {
+            tryToLoadTweetsAgainAndGoToPlayScreenOnSuccess()
+        }
     }
 }

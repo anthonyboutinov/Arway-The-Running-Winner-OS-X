@@ -27,7 +27,7 @@
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2015 Anthony Boutinov. All rights reserved.</string>
+	<string>Copyright © 2015 Anthony Boutinov, Alevtina Petrova, Alexandra Kuzmina, Alina Ganieva, . All rights reserved.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
