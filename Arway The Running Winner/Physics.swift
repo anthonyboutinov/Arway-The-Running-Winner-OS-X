@@ -536,7 +536,7 @@ class Physics {
         y = min(y, (map.mapSize.height * map.tileSize.height) - scene.size.height / 2)
         let actualPosition = CGPoint(x: x, y: y)
         let centerOfView = CGPoint(x: scene.size.width / 2, y: scene.size.height / 2)
-        let viewPoint = CGPointSubtract(centerOfView, actualPosition)
+        let viewPoint = centerOfView - actualPosition
         map.position = viewPoint
     }
     

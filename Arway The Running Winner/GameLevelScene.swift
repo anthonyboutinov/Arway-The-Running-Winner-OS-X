@@ -104,7 +104,6 @@ class GameLevelScene: SKScene {
 //            println(theEvent.character)
             break
         }
-        super.keyDown(theEvent)
         
     }
     

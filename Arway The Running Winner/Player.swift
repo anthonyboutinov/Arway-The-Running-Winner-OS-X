@@ -144,7 +144,7 @@ class Player: DisplacementAble, Updatable, HoldsItsSprite {
     func update(# delta: CFTimeInterval) {
 
         let velocityStep = calculateVelocityStep(delta)
-        desiredPosition = CGPointAdd(desiredPosition, velocityStep)
+        desiredPosition += velocityStep
         updateFrameAmination(delta, displacement: velocityStep)
         
     }
@@ -166,13 +166,13 @@ class Player: DisplacementAble, Updatable, HoldsItsSprite {
         let forwardMoveStep = forwardMove * delta
         
         let gravityStep = Physics.gravity * delta
-        velocity = CGPointAdd(velocity, gravityStep)
+        velocity += gravityStep
         
         velocity.x *= Player.slipperyCoefficient
         
         // Jumping
         if mightAsWellJump && onGround {
-            velocity = CGPointAdd(velocity, Player.jumpForce)
+            velocity += Player.jumpForce
             if Sound.soundEffects {
                 sprite.runAction(Sound.jumpSound)
             }
@@ -181,7 +181,7 @@ class Player: DisplacementAble, Updatable, HoldsItsSprite {
         }
         
         if forwardMarch || backwardsMarch {
-            velocity = CGPointAdd(velocity, forwardMoveStep)
+            velocity += forwardMoveStep
         }
         
         velocity = CGPoint(

@@ -20,6 +20,7 @@ class Sound {
     static let jumpSound = SKAction.playSoundFileNamed("jump.wav", waitForCompletion: false)
     static let hurtSound = SKAction.playSoundFileNamed("hurt.wav", waitForCompletion: false)
     static let powerupSound = SKAction.playSoundFileNamed("powerup.wav", waitForCompletion: false)
+    static let extraLifeSound = SKAction.playSoundFileNamed("extraLife.wav", waitForCompletion: false)
     //static let menuSound = SKAction.playSoundFileNamed("menu.wav", waitForCompletion: false)
     
     static let hissSounds: [SKAction] = [

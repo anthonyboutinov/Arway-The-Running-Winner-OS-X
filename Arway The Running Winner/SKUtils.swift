@@ -22,16 +22,9 @@ func presentScene(scene: SKScene, view: SKView, transition: SKTransition? = nil)
 // Extends CGPoint manipulations
 
 // Multiplies CGPoint's values by CGFloat
-func CGPointMultiplyScalar(var point: CGPoint, float: CGFloat) -> CGPoint {
+func *= (inout point: CGPoint, float: CGFloat) {
     point.x *= float
     point.y *= float
-    return point
-}
-
-func *= (inout point: CGPoint, float: CGFloat) -> CGPoint {
-    point.x *= float
-    point.y *= float
-    return point
 }
 
 func * (var point: CGPoint, float: CGFloat) -> CGPoint {
@@ -40,18 +33,40 @@ func * (var point: CGPoint, float: CGFloat) -> CGPoint {
     return point
 }
 
+// Divide CGPoint by CGFloat
+func /= (inout point: CGPoint, float: CGFloat) {
+    point.x /= float
+    point.y /= float
+}
+
+func / (var point: CGPoint, float: CGFloat) -> CGPoint {
+    point.x /= float
+    point.y /= float
+    return point
+}
+
 // Adds two CGPoints
-func CGPointAdd(var a: CGPoint, b: CGPoint) -> CGPoint {
+func + (var a: CGPoint, b: CGPoint) -> CGPoint {
     a.x += b.x
     a.y += b.y
     return a
 }
 
+func += (inout a: CGPoint, b: CGPoint) {
+    a.x += b.x
+    a.y += b.y
+}
+
 // Subtracts two CGPoints
-func CGPointSubtract(var a: CGPoint, b: CGPoint) -> CGPoint {
+func - (var a: CGPoint, b: CGPoint) -> CGPoint {
     a.x -= b.x
     a.y -= b.y
     return a
+}
+
+func -= (inout a: CGPoint, b: CGPoint) {
+    a.x -= b.x
+    a.y -= b.y
 }
 
 // Ensures that a scalar value stays with the range [min..max], inclusive
@@ -67,10 +82,6 @@ extension NSColor {
         
         self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
     }
-    
-//    convenience init(hex:Int) {
-//        self.init(red:(hex >> 16) & 0xff, green:(hex >> 8) & 0xff, blue:hex & 0xff)
-//    }
     
     // UIColor convenience initializer that
     // takes Objective-C's unsigned as given by the NSParser from NSString

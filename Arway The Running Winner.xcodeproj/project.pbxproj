@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A834C56A1ADD7B200077CA93 /* extraLife.wav in Resources */ = {isa = PBXBuildFile; fileRef = A834C5691ADD7B200077CA93 /* extraLife.wav */; };
 		A83D4A6E1AD9909E0014A982 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A83D4A6D1AD9909E0014A982 /* libz.dylib */; };
 		A83D4A9D1AD999390014A982 /* NSUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D4A9C1AD999390014A982 /* NSUtils.swift */; };
 		A83D4A9F1AD9C20E0014A982 /* DisplacementAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83D4A9E1AD9C20D0014A982 /* DisplacementAble.swift */; };
@@ -78,6 +79,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A834C5691ADD7B200077CA93 /* extraLife.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = extraLife.wav; sourceTree = "<group>"; };
 		A83D4A6D1AD9909E0014A982 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		A83D4A9C1AD999390014A982 /* NSUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSUtils.swift; sourceTree = "<group>"; };
 		A83D4A9E1AD9C20D0014A982 /* DisplacementAble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplacementAble.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 				A84B59421AD987CF00478227 /* coin.wav */,
 				A84B59431AD987CF00478227 /* 6dfcd1ecc4db.mp3 */,
 				A84B59441AD987CF00478227 /* hurt.wav */,
+				A834C5691ADD7B200077CA93 /* extraLife.wav */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 			files = (
 				A84B59461AD987CF00478227 /* jump.wav in Resources */,
 				A84B59311AD9879F00478227 /* city_spritesheet@2x.png in Resources */,
+				A834C56A1ADD7B200077CA93 /* extraLife.wav in Resources */,
 				A8BA83F61ADB11CE006D3D93 /* amy@2x.png in Resources */,
 				A8BA83E51ADAE85A006D3D93 /* World2Level1.tmx in Resources */,
 				A85B26111ADB7085002D0AC7 /* World1Level2.tmx in Resources */,

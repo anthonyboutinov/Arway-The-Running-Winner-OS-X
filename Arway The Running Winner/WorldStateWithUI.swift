@@ -28,6 +28,13 @@ class WorldStateWithUI: WorldState {
     }
     override var numLives: Int {
         didSet {
+            
+            if numLives > oldValue {
+                if Sound.soundEffects {
+                    parentScene!.runAction(Sound.extraLifeSound)
+                }
+            }
+            
             if oldValue == WorldState.defaultNumberOfLives && numLives > oldValue {
                 
                 // Transition from 'x sprites' to 'single sprite times number'
