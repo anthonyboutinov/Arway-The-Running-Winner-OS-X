@@ -58,8 +58,7 @@ class IntroScene: SKScene {
             Sound.backgroundMusic.play()
         }
         
-        let scene = GameLevelScene()
-        scene.worldState = WorldStateWithUI()
+        let scene = GameLevelScene(worldState: WorldStateWithUI())
         presentScene(scene, view!)//, transition: SKTransition.crossFadeWithDuration(1.0))
     }
     

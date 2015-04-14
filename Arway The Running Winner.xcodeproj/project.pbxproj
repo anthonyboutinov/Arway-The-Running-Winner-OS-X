@@ -57,6 +57,7 @@
 		A84B59511AD98CA300478227 /* LFCGzipUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A84B594F1AD98CA300478227 /* LFCGzipUtility.m */; };
 		A85B26111ADB7085002D0AC7 /* World1Level2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = A85B26101ADB7085002D0AC7 /* World1Level2.tmx */; };
 		A86F37DC1ADC2776003299C8 /* World3Level2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = A86F37DB1ADC2776003299C8 /* World3Level2.tmx */; };
+		A86F37E21ADCEF62003299C8 /* Physics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86F37E11ADCEF62003299C8 /* Physics.swift */; };
 		A8BA83E41ADAE85A006D3D93 /* World1Level1.tmx in Resources */ = {isa = PBXBuildFile; fileRef = A8BA83DF1ADAE85A006D3D93 /* World1Level1.tmx */; };
 		A8BA83E51ADAE85A006D3D93 /* World2Level1.tmx in Resources */ = {isa = PBXBuildFile; fileRef = A8BA83E01ADAE85A006D3D93 /* World2Level1.tmx */; };
 		A8BA83E61ADAE85A006D3D93 /* World2Level2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = A8BA83E11ADAE85A006D3D93 /* World2Level2.tmx */; };
@@ -134,6 +135,7 @@
 		A84B594F1AD98CA300478227 /* LFCGzipUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFCGzipUtility.m; sourceTree = "<group>"; };
 		A85B26101ADB7085002D0AC7 /* World1Level2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = World1Level2.tmx; sourceTree = "<group>"; };
 		A86F37DB1ADC2776003299C8 /* World3Level2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = World3Level2.tmx; sourceTree = "<group>"; };
+		A86F37E11ADCEF62003299C8 /* Physics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Physics.swift; sourceTree = "<group>"; };
 		A8BA83DF1ADAE85A006D3D93 /* World1Level1.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = World1Level1.tmx; sourceTree = "<group>"; };
 		A8BA83E01ADAE85A006D3D93 /* World2Level1.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = World2Level1.tmx; sourceTree = "<group>"; };
 		A8BA83E11ADAE85A006D3D93 /* World2Level2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = World2Level2.tmx; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			children = (
 				A84B58D41AD9869500478227 /* AppDelegate.swift */,
 				A83D4AA51AD9E8110014A982 /* Tweets.swift */,
+				A86F37E11ADCEF62003299C8 /* Physics.swift */,
 				A84B58FD1AD986D400478227 /* Scenes */,
 				A84B590C1AD9870000478227 /* Interactive Elements */,
 				A84B590D1AD9871000478227 /* WorldStateWithUI.swift */,
@@ -480,6 +483,7 @@
 				A84B59081AD986F300478227 /* MonsterCat.swift in Sources */,
 				A84B59511AD98CA300478227 /* LFCGzipUtility.m in Sources */,
 				A84B58F81AD986CB00478227 /* GameLevelScene.swift in Sources */,
+				A86F37E21ADCEF62003299C8 /* Physics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

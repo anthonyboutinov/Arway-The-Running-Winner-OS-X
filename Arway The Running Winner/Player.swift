@@ -165,7 +165,7 @@ class Player: DisplacementAble, Updatable, HoldsItsSprite {
         
         let forwardMoveStep = forwardMove * delta
         
-        let gravityStep = GameLevelScene.gravity * delta
+        let gravityStep = Physics.gravity * delta
         velocity = CGPointAdd(velocity, gravityStep)
         
         velocity.x *= Player.slipperyCoefficient
