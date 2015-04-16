@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PlayScene: SKScene {
+final class PlayScene: SKScene {
     
     private var backButton: SKSpriteNode!
     

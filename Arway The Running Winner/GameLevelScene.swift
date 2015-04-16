@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class GameLevelScene: SKScene {
+final class GameLevelScene: SKScene {
     
     // MARK: Variables
     
@@ -22,7 +22,7 @@ class GameLevelScene: SKScene {
     
     private let pauseButton = SKSpriteNode(imageNamed: "pause")
     
-    private let gameOverLabel = SKLabelNode(fontNamed: UIDesigner.gameFont)
+    private let gameOverLabel = UIDesigner.label()
     private let replayButton = UIDesigner.button()
     private let mainMenuButtonNextToReplayButton = UIDesigner.button()
     private var replayButtonLabel: SKLabelNode!
@@ -122,7 +122,6 @@ class GameLevelScene: SKScene {
         default:
             break
         }
-        super.keyDown(theEvent)
         
     }
     
@@ -283,8 +282,6 @@ class GameLevelScene: SKScene {
         
         // Configure scene
         let scene = GameLevelScene(worldState: physics.worldState)
-//        scene.physics.worldState = physics.worldState
-//        scene.physics.worldState.parentScene = scene
         
         presentScene(scene, view!)
     }

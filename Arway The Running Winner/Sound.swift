@@ -9,7 +9,7 @@
 import Foundation
 import AVFoundation
 
-class Sound {
+final class Sound {
     
     static var music = false
     static var soundEffects = false

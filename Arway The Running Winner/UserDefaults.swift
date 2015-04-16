@@ -8,7 +8,7 @@
 
 import Foundation
 
-class UserDefaults {
+final class UserDefaults {
     
     // MARK: - Music & Sound Effects
     

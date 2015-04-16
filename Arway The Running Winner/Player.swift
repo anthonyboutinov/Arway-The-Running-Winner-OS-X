@@ -10,8 +10,7 @@ import Foundation
 
 let defaultTimePerFrame = 0.35
 
-
-class Player: DisplacementAble, Updatable, HoldsItsSprite {
+final class Player: DisplacementAble, Updatable, HoldsItsSprite {
 
     
     // MARK: Physical properties and constraints

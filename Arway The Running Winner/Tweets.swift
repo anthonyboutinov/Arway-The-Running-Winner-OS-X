@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Tweets {
+final class Tweets {
     
     static var didLoad: Bool {
         return tweets.count > 0

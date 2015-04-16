@@ -8,7 +8,7 @@
 
 import Foundation
 
-class WorldStateWithUI: WorldState {
+final class WorldStateWithUI: WorldState {
     
     // Parent scene
     weak var parentScene: GameLevelScene?
@@ -28,8 +28,7 @@ class WorldStateWithUI: WorldState {
     }
     override var numLives: Int {
         didSet {
-            
-            if numLives > oldValue {
+            if oldValue != 1 && numLives != WorldState.defaultNumberOfLives && numLives > oldValue {
                 if Sound.soundEffects {
                     parentScene!.runAction(Sound.extraLifeSound)
                 }

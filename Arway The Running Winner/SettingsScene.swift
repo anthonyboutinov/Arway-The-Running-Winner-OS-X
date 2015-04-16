@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SettingsScene: SKScene {
+final class SettingsScene: SKScene {
     
     // MARK: UI Elements
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class UIDesigner {
+final class UIDesigner {
     
 //    static let primaryColor = NSColor(hex: 0x2d57a1)
     static let primaryColor = NSColor(hexAsString: "#2d57a1")

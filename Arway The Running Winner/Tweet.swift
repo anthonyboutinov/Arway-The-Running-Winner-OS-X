@@ -10,7 +10,7 @@ import Foundation
 
 typealias TweetStruct = (author:String, text:String)
 
-class Tweet: Updatable, HoldsItsSprite {
+final class Tweet: Updatable, HoldsItsSprite {
     
     static let defaultSpeed = CGFloat(52.0)
     

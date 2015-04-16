@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MainMenuScene: SKScene {
+final class MainMenuScene: SKScene {
     
     // MARK: Properties
     

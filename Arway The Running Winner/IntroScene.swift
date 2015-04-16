@@ -8,7 +8,7 @@
 
 import Foundation
 
-class IntroScene: SKScene {
+final class IntroScene: SKScene {
     
     private var video: SKVideoNode!
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Physics {
+final class Physics {
     
     static let gravity = CGPoint(x: 0.0, y: -450.0)
     

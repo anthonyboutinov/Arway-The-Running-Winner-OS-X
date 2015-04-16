@@ -8,7 +8,7 @@
 
 import Foundation
 
-class AboutScene: SKScene {
+final class AboutScene: SKScene {
     
     // MARK: Properties
     

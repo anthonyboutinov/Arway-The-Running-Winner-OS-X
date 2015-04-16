@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MonsterCat: Enemy {
+final class MonsterCat: Enemy {
     
     static let defaultSpeed = CGFloat(40.0)
     static let defaultFireDelay: CFTimeInterval = 2.0
