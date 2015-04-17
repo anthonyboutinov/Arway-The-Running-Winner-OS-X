@@ -31,6 +31,13 @@ final class UIDesigner {
         return SKLabelNode(fontNamed: font)
     }
     
+    class func uiOverlayLabel(fontSize: CGFloat = 24) -> SKLabelNode {
+        let label = SKLabelNode(fontNamed:"Helvetica-Nueue-Condensed-Bold")
+        label.fontSize = fontSize
+        label.fontColor = SKColor.whiteColor()
+        return label
+    }
+    
     class func setBackground(scene: SKScene, isMainMenu: Bool = false) {
 //        scene.backgroundColor = primaryColor
         let name = isMainMenu ? "BackgroundMainMenu" : "Background"

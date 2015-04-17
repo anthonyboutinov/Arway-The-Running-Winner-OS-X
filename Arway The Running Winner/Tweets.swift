@@ -32,7 +32,7 @@ final class Tweets {
         let endpoint = NSURL(string: "http://82.146.43.238")!
         
         // несколько попыток
-        for try in 0...6 {
+        for try in 0...2 {
             if let data = NSData(contentsOfURL: endpoint) {
                 
                 if let json: NSArray = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as? NSArray {

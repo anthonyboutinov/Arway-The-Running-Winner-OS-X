@@ -14,10 +14,10 @@ final class WorldStateWithUI: WorldState {
     weak var parentScene: GameLevelScene?
     
     let uiCoinsImage = SKSpriteNode(imageNamed: "hud_coins")
-    let uiCoinsText = SKLabelNode()
+    let uiCoinsText = UIDesigner.uiOverlayLabel()
     var uiLivesImages: [SKSpriteNode] = [SKSpriteNode]()
-    let uiLivesLabel = SKLabelNode()
-    let uiWorldLevelLabel = SKLabelNode()
+    let uiLivesLabel = UIDesigner.uiOverlayLabel()
+    let uiWorldLevelLabel = UIDesigner.uiOverlayLabel(fontSize: 18)
     
     private let uiLifeImageTexture = SKTexture(imageNamed: "hud_heartFull")
     
@@ -92,15 +92,6 @@ final class WorldStateWithUI: WorldState {
         uiLivesLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Left
         uiCoinsText.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Right
         uiWorldLevelLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Center
-        
-        for label in [uiLivesLabel, uiCoinsText] {
-            label.fontName = "Helvetica-Nueue-Condensed-Bold"
-            label.fontSize = 24
-            label.fontColor = SKColor.whiteColor()
-        }
-        uiWorldLevelLabel.fontColor = uiLivesLabel.fontColor
-        uiWorldLevelLabel.fontName = uiLivesLabel.fontName
-        uiWorldLevelLabel.fontSize = 14
         
         // Trigger 'didSet's
         self.numLives = numLives
