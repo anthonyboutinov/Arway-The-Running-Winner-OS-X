@@ -129,5 +129,6 @@
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager"/>
+        <customObject id="O1I-WE-dtT" customClass="SUUpdater"/>
     </objects>
 </document>

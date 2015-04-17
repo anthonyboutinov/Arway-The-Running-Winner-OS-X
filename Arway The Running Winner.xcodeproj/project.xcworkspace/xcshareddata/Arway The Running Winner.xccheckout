@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>15685C53-6D3E-4B3A-B1C9-9644BED93F49</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Arway The Running Winner</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>393805F48D215385831988A454FB462949F35228</key>
 		<string>https://github.com/anthonyboutinov/Arway-The-Running-Winner-OS-X.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Arway The Running Winner.xcodeproj/project.xcworkspace</string>
+	<string>Arway The Running Winner.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>393805F48D215385831988A454FB462949F35228</key>

@@ -56,6 +56,9 @@
 		A84B594A1AD987CF00478227 /* hurt.wav in Resources */ = {isa = PBXBuildFile; fileRef = A84B59441AD987CF00478227 /* hurt.wav */; };
 		A84B59501AD98CA300478227 /* JSTileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A84B594D1AD98CA300478227 /* JSTileMap.m */; };
 		A84B59511AD98CA300478227 /* LFCGzipUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = A84B594F1AD98CA300478227 /* LFCGzipUtility.m */; };
+		A85097451AE17B3800A1D218 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A85097441AE17B3800A1D218 /* Sparkle.framework */; };
+		A85097471AE17E5F00A1D218 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = A85097461AE17E5F00A1D218 /* dsa_pub.pem */; };
+		A850974C1AE19EB700A1D218 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A85097441AE17B3800A1D218 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A85B26111ADB7085002D0AC7 /* World1Level2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = A85B26101ADB7085002D0AC7 /* World1Level2.tmx */; };
 		A86F37DC1ADC2776003299C8 /* World3Level2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = A86F37DB1ADC2776003299C8 /* World3Level2.tmx */; };
 		A86F37E21ADCEF62003299C8 /* Physics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86F37E11ADCEF62003299C8 /* Physics.swift */; };
@@ -77,6 +80,19 @@
 			remoteInfo = "Arway The Running Winner";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A850974B1AE19E9D00A1D218 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A850974C1AE19EB700A1D218 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A834C5691ADD7B200077CA93 /* extraLife.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = extraLife.wav; sourceTree = "<group>"; };
@@ -135,6 +151,8 @@
 		A84B594D1AD98CA300478227 /* JSTileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTileMap.m; sourceTree = "<group>"; };
 		A84B594E1AD98CA300478227 /* LFCGzipUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFCGzipUtility.h; sourceTree = "<group>"; };
 		A84B594F1AD98CA300478227 /* LFCGzipUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFCGzipUtility.m; sourceTree = "<group>"; };
+		A85097441AE17B3800A1D218 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		A85097461AE17E5F00A1D218 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		A85B26101ADB7085002D0AC7 /* World1Level2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = World1Level2.tmx; sourceTree = "<group>"; };
 		A86F37DB1ADC2776003299C8 /* World3Level2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = World3Level2.tmx; sourceTree = "<group>"; };
 		A86F37E11ADCEF62003299C8 /* Physics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Physics.swift; sourceTree = "<group>"; };
@@ -153,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A83D4A6E1AD9909E0014A982 /* libz.dylib in Frameworks */,
+				A85097451AE17B3800A1D218 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +241,8 @@
 		A84B58D21AD9869500478227 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A85097461AE17E5F00A1D218 /* dsa_pub.pem */,
+				A85097441AE17B3800A1D218 /* Sparkle.framework */,
 				A83D4A6D1AD9909E0014A982 /* libz.dylib */,
 				A84B58DC1AD9869500478227 /* MainMenu.xib */,
 				A84B58D31AD9869500478227 /* Info.plist */,
@@ -344,6 +365,7 @@
 				A84B58CB1AD9869500478227 /* Sources */,
 				A84B58CC1AD9869500478227 /* Frameworks */,
 				A84B58CD1AD9869500478227 /* Resources */,
+				A850974B1AE19E9D00A1D218 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -439,6 +461,7 @@
 				A83D4AB01ADA938C0014A982 /* our-tiles.png in Resources */,
 				A84B59351AD9879F00478227 /* coin.png in Resources */,
 				A84B59491AD987CF00478227 /* 6dfcd1ecc4db.mp3 in Resources */,
+				A85097471AE17E5F00A1D218 /* dsa_pub.pem in Resources */,
 				A83D4AB91ADA98B50014A982 /* hiss1.wav in Resources */,
 				A84B59371AD9879F00478227 /* tiles_spritesheet@2x.png in Resources */,
 				A83D4AB71ADA98880014A982 /* hiss0.wav in Resources */,
@@ -607,11 +630,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Arway",
+					The,
+					Running,
+					Winner,
+				);
 				INFOPLIST_FILE = "Arway The Running Winner/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Arway The Running Winner/Arway The Running Winner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "";
 			};
 			name = Debug;
 		};
@@ -621,10 +653,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Arway",
+					The,
+					Running,
+					Winner,
+				);
 				INFOPLIST_FILE = "Arway The Running Winner/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Arway The Running Winner/Arway The Running Winner-Bridging-Header.h";
+				VERSIONING_SYSTEM = "";
 			};
 			name = Release;
 		};
