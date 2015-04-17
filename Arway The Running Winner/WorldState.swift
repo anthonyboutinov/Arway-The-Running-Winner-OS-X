@@ -12,12 +12,15 @@ class WorldState: Printable {
     
     static let defaultNumberOfLives = 4
     static let coinsToLifeThreshold = 200
+    
+//    static let recommendedNumberOfCoins = 562
+    
     static let levelsPerWorld = 2
     static let totalNumberOfWorlds = 4
     
     // MARK: - Variables
     
-    var description: String {
+    final var description: String {
         return "WorldState(World \(world) Level \(level), \(numCoins) coins, \(numLives) lives)"
     }
     
@@ -56,17 +59,17 @@ class WorldState: Printable {
             }
         }
     }
-
-var tmxFileName: String {
-    return "World\(world)Level\(level).tmx"
+    
+    final var tmxFileName: String {
+        return "World\(world)Level\(level).tmx"
     }
     
-    var backgroundImageFileName: String {
+    final var backgroundImageFileName: String {
         return "World\(world)Level\(level)"
     }
     
     var gameOver = false
-        
+    
     // MARK: - Methods
     
     init(numCoins: Int = 0, numLives: Int = defaultNumberOfLives, world: Int = 1, level: Int = 1) {
@@ -76,7 +79,7 @@ var tmxFileName: String {
         self.level = level
     }
     
-    func advanceToTheNextLevel() {
+    final func advanceToTheNextLevel() {
         level++
         
         if isTheEndOfTheGame() {
@@ -86,7 +89,7 @@ var tmxFileName: String {
         }
     }
     
-    func isTheEndOfTheGame() -> Bool {
+    final func isTheEndOfTheGame() -> Bool {
         return world == WorldState.totalNumberOfWorlds && level == WorldState.levelsPerWorld // last world last level is nonexistent, so the game ends here
     }
     
