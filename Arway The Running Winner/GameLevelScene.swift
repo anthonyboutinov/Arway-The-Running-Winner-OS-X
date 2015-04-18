@@ -78,11 +78,13 @@ final class GameLevelScene: SKScene {
             physics.player.forwardMarch = true
             return
         case NSEqualsOrPlusKey:
-            physics.gameOverState = .playerHasWon
-            physics.gameIsOver = true
-            if physics.worldState.isTheEndOfTheGame() {
-            } else {
-                replay()
+            if !physics.gameIsOver {
+                physics.gameOverState = .playerHasWon
+                physics.gameIsOver = true
+                if physics.worldState.isTheEndOfTheGame() {
+                } else {
+                    replay()
+                }
             }
         case NSEnterFunctionKey:
             if gameIsPaused {
