@@ -26,9 +26,34 @@
     <property name="kind" value="torch"/>
    </properties>
   </tile>
+  <tile id="44">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
+   </properties>
+  </tile>
+  <tile id="56">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
+   </properties>
+  </tile>
+  <tile id="68">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
+   </properties>
+  </tile>
   <tile id="72">
    <properties>
     <property name="durability" value="1"/>
+   </properties>
+  </tile>
+  <tile id="80">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
+   </properties>
+  </tile>
+  <tile id="82">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
    </properties>
   </tile>
   <tile id="96">
@@ -71,10 +96,25 @@
  </tileset>
  <tileset firstgid="158" name="city_spritesheet" tilewidth="35" tileheight="35">
   <image source="city_spritesheet.png" width="490" height="245"/>
+  <tile id="85">
+   <properties>
+    <property name="customCollisionBoundingBox" value="lowerSlab"/>
+   </properties>
+  </tile>
+  <tile id="92">
+   <properties>
+    <property name="customCollisionBoundingBox" value="lowerSlab"/>
+   </properties>
+  </tile>
+  <tile id="93">
+   <properties>
+    <property name="customCollisionBoundingBox" value="lowerSlab"/>
+   </properties>
+  </tile>
  </tileset>
  <layer name="Background" width="100" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3OMQ0AMAwEsQAqr/JnUA6foYpiS7dfFQAAAAAAAMBuN+zX0yTJ+wnrekaj0MNAHwAA
+   H4sIAAAAAAAAA+3OsQkAIBAEwS/IvuwfLMDczPtInIHl0qsCAAAAAAAA+NsMu7WOTT+9JPk+wro2LWS280AfAAA=
   </data>
  </layer>
  <layer name="BackgroundDecor" width="100" height="20">
@@ -84,17 +124,17 @@
  </layer>
  <layer name="Walls" width="100" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3UwQmEMBCF4TRkARbgRU9LStiDN4u3AlkQVkKcyRg1Ef8PBjyYYZIXdQ4AAAAA8NOuhTq1joxyde5/ho3yLmd9nU/pAW7mSw+ww5ID38O5tmffFZviHj7huZS3/Ytq9cYcarj/oSfkMK11FnI4bgrqqXqhJIOyNtZnVp731mn9wyximWzvlWVmq9yeX6Eko7I21kfLI7WftSx7Ttm7JHfWBRtNwIpAHwAA
+   H4sIAAAAAAAAA+3USwqDMBSF4WyoC+gCnNRRcQkddObidQMaaCGEPO71dRX/Dw5kknDJiToHAAAAAPCaOQ/rIZDl+3k6Olrjf4eSe+R72M/beoCDddYDZGh64HvYVnj3jdkUx+gEayt3+xed1R17OMP7j12hh/6XrdDDcn2Uq3oVUtJW9qbOGTPrITOLZEafuItUJ+G70syspT1zDOJ9Cin5Vvamzhkqa+l52sSW7JFaO+sEy6Nb9UAfAAA=
   </data>
  </layer>
  <layer name="Hazards" width="100" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3SIQ4AIAwDwL2DB/D//81gcATkmLhLmlRWNAIAAAAAAIDu8vcA2sg4/+AfPeWlV5s7rz6qRzW1AEz0F59AHwAA
+   H4sIAAAAAAAAA+3SMQrAMAgAQN+RB+T/72uWdrBLkrkVcgeCCoKgEQAAAAAAAFQ3/l6AMq5Y/2Fkn1reu+xu9qX2RM+8Zz332zx0qBuDlJNAQB8AAA==
   </data>
  </layer>
  <layer name="CollidableItems" width="100" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3XQQ3AIBBEUSoDMchAQCXhGLjhYNLyXjL3n71tKQAA3K6mAz5u36+tvekQrvKkAwAA4LD/obHW0yFE+YuBP5gytqbUQB8AAA==
+   H4sIAAAAAAAAA+3XsQ0AEBCGUcYwjDEMYCQbo9MrLuK95O+/XHcpAQDwuxId8Lh9v7rWo0P4So4OAACAw/6HxlqLDgGASxOX9kKgQB8AAA==
   </data>
  </layer>
  <layer name="NoncollidableItems" width="100" height="20">

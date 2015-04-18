@@ -26,9 +26,39 @@
     <property name="kind" value="torch"/>
    </properties>
   </tile>
+  <tile id="44">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
+   </properties>
+  </tile>
+  <tile id="56">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
+   </properties>
+  </tile>
+  <tile id="68">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
+   </properties>
+  </tile>
+  <tile id="71">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
+   </properties>
+  </tile>
   <tile id="72">
    <properties>
     <property name="durability" value="1"/>
+   </properties>
+  </tile>
+  <tile id="77">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
+   </properties>
+  </tile>
+  <tile id="80">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
    </properties>
   </tile>
   <tile id="96">
@@ -36,6 +66,16 @@
     <property name="contains" value="coin"/>
     <property name="durability" value="5"/>
     <property name="isBouncy" value="1"/>
+   </properties>
+  </tile>
+  <tile id="117">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
+   </properties>
+  </tile>
+  <tile id="119">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
    </properties>
   </tile>
   <tile id="120">
@@ -48,6 +88,11 @@
   <tile id="124">
    <properties>
     <property name="isBouncy" value="1"/>
+   </properties>
+  </tile>
+  <tile id="126">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
    </properties>
   </tile>
   <tile id="132">
@@ -71,13 +116,28 @@
  </tileset>
  <tileset firstgid="158" name="city_spritesheet" tilewidth="35" tileheight="35">
   <image source="city_spritesheet.png" width="490" height="245"/>
+  <tile id="85">
+   <properties>
+    <property name="customCollisionBoundingBox" value="lowerSlab"/>
+   </properties>
+  </tile>
+  <tile id="92">
+   <properties>
+    <property name="customCollisionBoundingBox" value="lowerSlab"/>
+   </properties>
+  </tile>
+  <tile id="93">
+   <properties>
+    <property name="customCollisionBoundingBox" value="lowerSlab"/>
+   </properties>
+  </tile>
  </tileset>
  <tileset firstgid="256" name="Design" tilewidth="35" tileheight="35">
   <image source="our-tiles.png" width="175" height="175"/>
  </tileset>
  <layer name="Background" width="206" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3VOQ7CMBBG4dwh92eHih0qdqiAAjhLxAGYIkgugklIzMTW+6RXxprmV6IIAAAAAAAAAIBw3KR7jh5aB8ILZ+mS0VXzKMd6Ut/SQO80eKQhNY1aqte4N5cWlpZ6p8EjQ2lkNNY9xzl2gyr4tpu45PfsBlXwZTdl9/LGblCFuu/m017aUietW+A9dvN/T+0DHKjjbuLo+/9lIk3TZgXePkhHS6eCt8IuMQpJHXeTx6+7wf8kGYWC3cCFrM2EtJ2VtDba6J6T21bape2VbwEAAAjNC2uTgOVgQAAA
+   H4sIAAAAAAAAA+3Yyw7BUBRG4b5D39+dkTsjd0YY4FlaIyZ2opJG6rTVHqen1pesgQjZk78SjgMAAAAAAADABteY1wCeTtI5QRdTB8IKe+kQ0dHkUZq1pLaijrnTYJGKVA1VM3qNfmNpomhq7jRYpCv1QvXNnqMdu0EebNuNm/Hz7AZ5sGU3Wffywm6Qh6Lv5tNe6lIjqJni+9jN75XxP/4i7sZ14n9fBtIwaJTiuzfSVtEu5a1Q80KVSRF3k8S3u0F2flAcL6KyYDfQIWozRd/O+7NA9WyYSfNQC11H5WwprYLWEe/ffnsOAJTG3fQBgGZ+iv7ZA9xQ0BtgQAAA
   </data>
  </layer>
  <layer name="BackgroundDecor" width="206" height="20">
@@ -87,7 +147,7 @@
  </layer>
  <layer name="Walls" width="206" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3ZPwrCMBTH8QxOnsPVVfAAgh0dvIMew1EQd2+kHscT2ECHEEr+6HtNot8P/MAuz9ekry3UGAAAAAAAAABAyKbPesiycC9o17Z0AwCqtSvdAJq2Nf/zjLHvZLyLQVPN89QNiWFOIK3WmYjpTNrc8B5WL7s39z4PL8+STSmoYca6QFw8Y+rFvQy/aK9Ut6V5ufRZeLkK1NVaA/c7Ct9S2qf93D8EktvHWby7sG9mqJV70Crz2PL38ajQl4S5k5bYNb0F4s/OmKlnpaSTGb+/1HRdju0j5MRmJmd2/oGdmZT1ksonJGrNhryc3/5x6B0lNWMk6sb+89saOXvonqfmOeXUl1zvmNz1KjE3qbVi/ztLiNb5TbGmU+/jVNfJJ+uusYeS9TV60uqvtbl5Aw8+gmdgQAAA
+   H4sIAAAAAAAAA+3ZTarCMBSG4QwcuQ6nLuAuQLATwV14l3EHdyCIc3ekLkc3YAMVQij50XOaRN8HDthJPE36NYEaAwAAAAAAAAAIWfX1M9SycC9o17p0AwCqtS3dAJq2Nt+zx9gzGWcxaKo5T91QMeSkDffSDWSoNRMxnUnLDeewetm1Ofd18epasikFNWSsC5SLPaZevMvwif6Vxm0pL4e+Fl4dBcbVmgP3OwrfUsqRyo72vr8LVG4fe/Huwt7JUCvvoE3mteWv469CXxLmTj1p7TmS7JyeAuVnZ8zUWSnpz4y/X2p6LsfWsSW15yaWmZzsfAObmZT5kqpXSIw1G+rm/PavQ2eU1BojMW7sP98dI2cN3fvUvKec8SXnOyZ3vkrkJnWs2P/OEkrr/qaY06nXcarn5JV511hDyfE1etLqr7XcPABV6zWkYEAAAA==
   </data>
  </layer>
  <layer name="Hazards" width="206" height="20">

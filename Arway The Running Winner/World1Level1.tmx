@@ -70,6 +70,16 @@
  </tileset>
  <tileset firstgid="158" name="city_spritesheet" tilewidth="35" tileheight="35">
   <image source="city_spritesheet.png" width="490" height="245"/>
+  <tile id="92">
+   <properties>
+    <property name="customCollisionBoundingBox" value="lowerSlab"/>
+   </properties>
+  </tile>
+  <tile id="93">
+   <properties>
+    <property name="customCollisionBoundingBox" value="lowerSlab"/>
+   </properties>
+  </tile>
  </tileset>
  <tileset firstgid="256" name="our-tiles" tilewidth="35" tileheight="35">
   <image source="our-tiles.png" width="175" height="175"/>

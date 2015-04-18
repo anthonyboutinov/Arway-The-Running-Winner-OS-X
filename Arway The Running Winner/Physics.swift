@@ -22,6 +22,10 @@ final class Physics {
         case isBouncy = "isBouncy" // The tile bounces when it's hit by the player's head
         case durability = "durability" // How many times the player has to hit this tile with his head in order for it to destroy. Each time tile's ducatility is decreased, it emits something (if it contains anything)
         case contains = "contains" // What the tile contains
+        case customCollisionBoundingBox = "customCollisionBoundingBox" // Defines custom collision bounding box
+        case customCollisionBoundingBoxType = "ccbb" // The type of the custom collision bounding box
+        case upperSlab = "upperSlab" // Custom collision bounding box of 'Upper Slab' type
+        case lowerSlab = "lowerSlab" // Custom collision bounding box of 'Lower Slab' type
         case hasBeenRemovedFromTheView = "r" // Marks that the tile has been removed from the view
         case willAutoRelease = "d" // Marks that the tile will be automatically removed when it finishes doing an action or an animation
     }
@@ -134,6 +138,11 @@ final class Physics {
         backgroundImage.zPosition = -1000
         scene.addChild(backgroundImage)
         
+        // Apply custom collision bounding boxes
+        applyCustomCollistionBoundingBoxes(walls)
+        applyCustomCollistionBoundingBoxes(hazards)
+        applyCustomCollistionBoundingBoxes(collidableItems)
+        
     }
     
     private func initPlayer() {
@@ -155,6 +164,34 @@ final class Physics {
             ])
         
     }
+    
+    func applyCustomCollistionBoundingBoxes(layer: TMXLayer) {
+        
+        for x in 0..<Int(map.mapSize.width) {
+            for y in 0..<Int(map.mapSize.height) {
+
+                let tileCoord = CGPoint(x: x, y: y)
+                let gid: Int = map.tileGID(atTileCoord: tileCoord, forLayer: layer)
+                if gid != 0 {
+                    
+                    if let properties: NSMutableDictionary = map.tileProperties[NSInteger(gid)] as? NSMutableDictionary {
+                        if let customCollisionBoundingBox = properties[Properties.customCollisionBoundingBox.rawValue] as? String {
+                            
+                            let tile = layer.tileAtCoord(tileCoord)
+                            if tile.userData == nil {
+                                tile.userData = NSMutableDictionary()
+                            }
+                            tile.userData?.setValue(customCollisionBoundingBox, forKey: Properties.customCollisionBoundingBoxType.rawValue)
+                            
+                        }
+                    }
+                    
+                }
+                
+            }
+        }
+    }
+    
     func update(currentTime: CFTimeInterval) {
         
         if gameIsOver {
@@ -207,8 +244,10 @@ final class Physics {
             if worldState.world == WorldState.totalNumberOfWorlds {
                 position.x += player.sprite.position.y
             }
-            // TODO: WORLDSTATE COLORS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+            // COLORS
             let mainColor = worldState.world < 3 ? NSColor.blackColor() : NSColor.whiteColor()
+            
             let cat = MonsterCat(position: position, mainColor: mainColor)
             map.addChild(cat.sprite)
             updatables.append(cat)
@@ -289,7 +328,7 @@ final class Physics {
         let gid: Int = map.tileGID(atTileCoord: tileCoord, forLayer: layer)
         // If gid is not black space
         if gid != 0 {
-            let tileRect = map.tileRect(fromTileCoord: tileCoord)
+            let tileRect = map.tileRect(fromTileCoord: tileCoord, onLayer: layer)
             
             // Collision resolution
             if CGRectIntersectsRect(playerRect, tileRect) {
@@ -354,7 +393,7 @@ final class Physics {
     private func checkIfCollidedWithAHazard(tileCoord: CGPoint, _ playerRect: CGRect) -> Bool {
         let gid = map.tileGID(atTileCoord: tileCoord, forLayer: hazards)
         if gid != 0 {
-            let tileRect = map.tileRect(fromTileCoord: tileCoord)
+            let tileRect = map.tileRect(fromTileCoord: tileCoord, onLayer: hazards)
             if CGRectIntersectsRect(playerRect, tileRect) {
                 
                 gameOverState = .playerHasLost
@@ -512,7 +551,7 @@ final class Physics {
     }
     
     private func checkContainsPropertyOfATile(properties: NSMutableDictionary) -> Bool {
-        if let contains = properties["contains"] as? String {
+        if let contains = properties[Properties.contains.rawValue] as? String {
             switch contains {
             case "coin":
                 worldState.numCoins++

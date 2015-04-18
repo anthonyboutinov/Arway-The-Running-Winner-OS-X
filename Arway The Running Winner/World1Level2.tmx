@@ -25,6 +25,11 @@
     <property name="kind" value="torch"/>
    </properties>
   </tile>
+  <tile id="71">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
+   </properties>
+  </tile>
   <tile id="72">
    <properties>
     <property name="durability" value="1"/>
@@ -37,6 +42,16 @@
     <property name="isBouncy" value="1"/>
    </properties>
   </tile>
+  <tile id="117">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
+   </properties>
+  </tile>
+  <tile id="119">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
+   </properties>
+  </tile>
   <tile id="120">
    <properties>
     <property name="contains" value="coin"/>
@@ -47,6 +62,11 @@
   <tile id="124">
    <properties>
     <property name="isBouncy" value="1"/>
+   </properties>
+  </tile>
+  <tile id="126">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
    </properties>
   </tile>
   <tile id="132">
@@ -70,6 +90,16 @@
  </tileset>
  <tileset firstgid="158" name="city_spritesheet" tilewidth="35" tileheight="35">
   <image source="city_spritesheet.png" width="490" height="245"/>
+  <tile id="92">
+   <properties>
+    <property name="customCollisionBoundingBox" value="lowerSlab"/>
+   </properties>
+  </tile>
+  <tile id="93">
+   <properties>
+    <property name="customCollisionBoundingBox" value="lowerSlab"/>
+   </properties>
+  </tile>
  </tileset>
  <tileset firstgid="256" name="our-tiles" tilewidth="35" tileheight="35">
   <image source="our-tiles.png" width="175" height="175"/>
@@ -96,7 +126,7 @@
  </layer>
  <layer name="Walls" width="110" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3UbQqDMAyA4Zax/dg5eoidzAt6MTfYjxoSP9ZI43wfCJqKkjatKQEAAAAAAJxb6V0A8IeKcZXPr2roXcCFDFXIMSvXvhFNSZwjS8R+tSgi5JiWe3nm5efa+dqj5d0jeaznS8T4DTlW5x4+Pbvlee9a+9TT/T2PR7Zzb1ZvrBjF/S/qnsnenc3S2nms1VG0+rR5rI31slaj938miq37Lepe3FJbtL3mYQIAo/+XYCIAAA==
+   H4sIAAAAAAAAA+3Vyw3CMAyA4USoHJiDIRiBiRA3zpmrixEkDq2VRyGmcen/SVYb5+LESescAAAAAADAtoXeBQB/6Jp5yvm92vv61/SIcYtxF7nSWLLYr+D4f+VY7FeLswiZS421nHx5PnW/PlG7e70E137HLiLGd8jcdKzh1bODn/eutU89DXEdR58fa8v1JhejeP/GtGeyd1tT2juNvfqVVH2pddRyvdRq1P7OWLH0vFk9i0tqs3bWNDwBQp+6OWAiAAA=
   </data>
  </layer>
  <layer name="Hazards" width="110" height="20">

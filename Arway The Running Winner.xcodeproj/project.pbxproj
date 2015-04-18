@@ -405,6 +405,11 @@
 				TargetAttributes = {
 					A84B58CE1AD9869500478227 = {
 						CreatedOnToolsVersion = 6.3;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					A84B58E21AD9869500478227 = {
 						CreatedOnToolsVersion = 6.3;

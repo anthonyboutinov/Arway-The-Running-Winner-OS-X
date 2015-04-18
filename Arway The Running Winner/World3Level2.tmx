@@ -9,6 +9,16 @@
     <property name="isBouncy" value="1"/>
    </properties>
   </tile>
+  <tile id="2">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
+   </properties>
+  </tile>
   <tile id="24">
    <properties>
     <property name="contains" value="powerUp"/>
@@ -21,9 +31,19 @@
     <property name="kind" value="torch"/>
    </properties>
   </tile>
+  <tile id="26">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
+   </properties>
+  </tile>
   <tile id="37">
    <properties>
     <property name="kind" value="torch"/>
+   </properties>
+  </tile>
+  <tile id="71">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
    </properties>
   </tile>
   <tile id="72">
@@ -38,6 +58,16 @@
     <property name="isBouncy" value="1"/>
    </properties>
   </tile>
+  <tile id="117">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
+   </properties>
+  </tile>
+  <tile id="119">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
+   </properties>
+  </tile>
   <tile id="120">
    <properties>
     <property name="contains" value="coin"/>
@@ -50,6 +80,11 @@
     <property name="isBouncy" value="1"/>
    </properties>
   </tile>
+  <tile id="126">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
+   </properties>
+  </tile>
   <tile id="132">
    <properties>
     <property name="durability" value="3"/>
@@ -58,6 +93,11 @@
   <tile id="144">
    <properties>
     <property name="durability" value="2"/>
+   </properties>
+  </tile>
+  <tile id="145">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
    </properties>
   </tile>
  </tileset>
@@ -71,6 +111,31 @@
  </tileset>
  <tileset firstgid="158" name="city_spritesheet" tilewidth="35" tileheight="35">
   <image source="city_spritesheet.png" width="490" height="245"/>
+  <tile id="49">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
+   </properties>
+  </tile>
+  <tile id="63">
+   <properties>
+    <property name="customCollisionBoundingBox" value="upperSlab"/>
+   </properties>
+  </tile>
+  <tile id="85">
+   <properties>
+    <property name="customCollisionBoundingBox" value="lowerSlab"/>
+   </properties>
+  </tile>
+  <tile id="92">
+   <properties>
+    <property name="customCollisionBoundingBox" value="lowerSlab"/>
+   </properties>
+  </tile>
+  <tile id="93">
+   <properties>
+    <property name="customCollisionBoundingBox" value="lowerSlab"/>
+   </properties>
+  </tile>
  </tileset>
  <tileset firstgid="256" name="design" tilewidth="35" tileheight="35">
   <image source="our-tiles.png" width="175" height="175"/>
@@ -82,7 +147,7 @@
  </tileset>
  <layer name="Background" width="140" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+2Y2wnCMBiF06cq3sXLDA7giB3AESzqAGofFS8LOIDaIfTFN0+hQoRGGjVpxPPBh1Ah/2k5tGmFIETNGEYwTCXkFUlfQsG+kHzIfYkKzkLch/cXokPSl1iwLyQf7AvRge9Hv8/V4izuX4gOcl/igrMQ93n0JXkmqfpysxeHOA73u0QH7l+IDjbej3zF8YOhecQcNva7R3jK8GxoHjGHrefRHC4klwZn/TMXw+vb+l43gVO4T39nBme5QsMToglbsO0VneYZH3lKsKyZK6svARx9ebbO/UW13qvr/+75m6SDLF3Yg32HclWQpQprsK6ZawXXkjLBF2dv4FZyl3O9IY4N0v9U1/+T8yeE2OMO7/rxc8ArAAA=
+   H4sIAAAAAAAAA+2YSQ4BQRiFywoxi+EMDuCIDuAIBAcwLInhAg5gOAQbbLxKWlISRRdqEO9LvkhaUv/rzkt3dQtBiJ4OnMBuJCHPkH3pCvaFxEPty8RzFhI+vL8QE2Rf9oJ9IfFgX4gJfD/6fY4OZ3H/8pqz7wABofZl7zkLCZ9bX+QzSdeXk7s4JHC43yUmcP9CTHDxfpTUHF9bmueKi+8AHnCx393A7QN3luYRe7h6Hg3hSHFscdY/c7C8vqvvdT3Yh6vod2BxVigUEkIUYQmWE77T3JNEnhRMG+Z61JcWbH95tsn9Rbfes+v/7vnbQu5tKshShTVYDySXJIMsWZiDecNcUzhTVGl9cfYcLhSXMddr4lgj+k93/T85f0KIO65XQCovwCsAAA==
   </data>
  </layer>
  <layer name="BackgroundDecor" width="140" height="20">
