@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Sparkle
 
 final class MainMenuScene: SKScene {
     
@@ -36,6 +37,8 @@ final class MainMenuScene: SKScene {
         UIDesigner.setBackground(self, isMainMenu: true)
         
         UIDesigner.addTitleAsImage("Logo", self, yOffset: 30.0)
+        
+        updateTheApp()
         
         if !Tweets.didLoad {
             showErrorMessage()
@@ -126,5 +129,9 @@ final class MainMenuScene: SKScene {
         } else {
             tryToLoadTweetsAgainAndGoToPlayScreenOnSuccess()
         }
+    }
+    
+    private func updateTheApp() {
+        SUUpdater.sharedUpdater().checkForUpdatesInBackground()
     }
 }

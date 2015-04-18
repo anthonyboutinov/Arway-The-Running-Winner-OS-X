@@ -9,6 +9,7 @@
 
 import Cocoa
 import SpriteKit
+import Sparkle
 
 @NSApplicationMain
 final class AppDelegate: NSObject, NSApplicationDelegate {
@@ -35,6 +36,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         
         presentScene(scene, skView)
         
+    }
+    
+    @IBAction func checkForUpdates(sender: AnyObject) {
+        SUUpdater.sharedUpdater().checkForUpdates(sender)
     }
     
     func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool {
