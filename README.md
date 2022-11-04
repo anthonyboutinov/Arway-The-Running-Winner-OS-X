@@ -4,7 +4,7 @@ Stack: **Xcode (OS X project)**, **Swift**, **SpriteKit**, **Sparkle**
 
 Requirements: **MacOS ^10.10**; **written in Swift 3 (Xcode 10)**
 
-<img src="readme-images/arway-preview.jpg" alt="Awray The Running Winner — Preview" />
+<img src="readme-images/arway-preview.png" alt="Awray The Running Winner — Preview" />
 
 ## About
 
